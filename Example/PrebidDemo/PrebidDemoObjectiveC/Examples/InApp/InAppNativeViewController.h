@@ -15,7 +15,7 @@
 
 #import "NativeBaseViewController.h"
 
-@import PrebidMobile;
+@import SilverMobSdk;
 
 NS_ASSUME_NONNULL_BEGIN
 

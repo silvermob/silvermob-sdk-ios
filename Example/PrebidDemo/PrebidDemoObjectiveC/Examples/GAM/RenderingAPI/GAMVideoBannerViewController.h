@@ -15,8 +15,8 @@
 
 #import "BannerBaseViewController.h"
 
-@import PrebidMobile;
-@import PrebidMobileGAMEventHandlers;
+@import SilverMobSdk;
+@import SilverMobSdkGAMEventHandlers;
 @import GoogleMobileAds;
 
 NS_ASSUME_NONNULL_BEGIN

@@ -266,7 +266,7 @@ UITableViewDataSource, UITableViewDelegate>
     } else if(indexPath.section == 1){
         return [self configureDemandServerSection:self.tableView withIndexPath:indexPath];
     } else {
-        return [self configurePrebidMobileSDKSection:self.tableView withIndexPath:indexPath];
+        return [self configureSilverMobSdkSDKSection:self.tableView withIndexPath:indexPath];
     }
     
    // return nil;
@@ -373,7 +373,7 @@ UITableViewDataSource, UITableViewDelegate>
     return nil;
 }
 
--(UITableViewCell *) configurePrebidMobileSDKSection:(UITableView *) tableView withIndexPath:(NSIndexPath *)indexPath {
+-(UITableViewCell *) configureSilverMobSdkSDKSection:(UITableView *) tableView withIndexPath:(NSIndexPath *)indexPath {
     
     SectionCell *cell = (SectionCell *)[self.tableView dequeueReusableCellWithIdentifier:kSectionCellString ];
     

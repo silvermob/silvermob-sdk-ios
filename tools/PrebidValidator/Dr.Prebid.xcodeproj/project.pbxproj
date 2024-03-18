@@ -80,31 +80,31 @@
 		F5D1856621011571001DF99A /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = F5D1856221011570001DF99A /* about.html */; };
 		F5D1856721011571001DF99A /* info-prebid-server.html in Resources */ = {isa = PBXBuildFile; fileRef = F5D1856321011570001DF99A /* info-prebid-server.html */; };
 		F5D1856821011571001DF99A /* info-general.html in Resources */ = {isa = PBXBuildFile; fileRef = F5D1856421011571001DF99A /* info-general.html */; };
-		FAC9E2042327EFB000113B04 /* PrebidMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA12E526231FD3BD00CAA05B /* PrebidMobile.framework */; };
-		FAC9E2052327EFB000113B04 /* PrebidMobile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA12E526231FD3BD00CAA05B /* PrebidMobile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAC9E2042327EFB000113B04 /* SilverMobSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA12E526231FD3BD00CAA05B /* SilverMobSdk.framework */; };
+		FAC9E2052327EFB000113B04 /* SilverMobSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA12E526231FD3BD00CAA05B /* SilverMobSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		FA12E525231FD3BD00CAA05B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FA12E520231FD3BD00CAA05B /* PrebidMobile.xcodeproj */;
+			containerPortal = FA12E520231FD3BD00CAA05B /* SilverMobSdk.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 60D792F2217E229A0080F428;
-			remoteInfo = PrebidMobile;
+			remoteInfo = SilverMobSdk;
 		};
 		FA12E527231FD3BD00CAA05B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FA12E520231FD3BD00CAA05B /* PrebidMobile.xcodeproj */;
+			containerPortal = FA12E520231FD3BD00CAA05B /* SilverMobSdk.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 60D792FB217E229B0080F428;
-			remoteInfo = PrebidMobileTests;
+			remoteInfo = SilverMobSdkTests;
 		};
 		FAC9E2062327EFB000113B04 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FA12E520231FD3BD00CAA05B /* PrebidMobile.xcodeproj */;
+			containerPortal = FA12E520231FD3BD00CAA05B /* SilverMobSdk.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = FAAA00BC2322733E009DC7D6;
-			remoteInfo = PrebidMobile;
+			remoteInfo = SilverMobSdk;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -115,7 +115,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FAC9E2052327EFB000113B04 /* PrebidMobile.framework in Embed Frameworks */,
+				FAC9E2052327EFB000113B04 /* SilverMobSdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,7 +244,7 @@
 		F5D1856321011570001DF99A /* info-prebid-server.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "info-prebid-server.html"; sourceTree = "<group>"; };
 		F5D1856421011571001DF99A /* info-general.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "info-general.html"; sourceTree = "<group>"; };
 		F6CF0D6B7635B4C963599C3F /* Pods-Dr.Prebid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dr.Prebid.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-Dr.Prebid/Pods-Dr.Prebid.release.xcconfig"; sourceTree = "<group>"; };
-		FA12E520231FD3BD00CAA05B /* PrebidMobile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PrebidMobile.xcodeproj; path = ../../PrebidMobile.xcodeproj; sourceTree = "<group>"; };
+		FA12E520231FD3BD00CAA05B /* SilverMobSdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SilverMobSdk.xcodeproj; path = ../../SilverMobSdk.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,7 +252,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC9E2042327EFB000113B04 /* PrebidMobile.framework in Frameworks */,
+				FAC9E2042327EFB000113B04 /* SilverMobSdk.framework in Frameworks */,
 				60CFB2EA2097A4C4006FCF7C /* WebKit.framework in Frameworks */,
 				60CFB2EB2097A4C4006FCF7C /* StoreKit.framework in Frameworks */,
 				60CFB2EC2097A4C4006FCF7C /* SafariServices.framework in Frameworks */,
@@ -353,7 +353,7 @@
 		60C678762073D7B0003A7A1D = {
 			isa = PBXGroup;
 			children = (
-				FA12E520231FD3BD00CAA05B /* PrebidMobile.xcodeproj */,
+				FA12E520231FD3BD00CAA05B /* SilverMobSdk.xcodeproj */,
 				60CFB2562097820D006FCF7C /* Dr.Prebid */,
 				60C678802073D7B0003A7A1D /* Products */,
 				60C678AC2073F879003A7A1D /* Frameworks */,
@@ -510,8 +510,8 @@
 		FA12E521231FD3BD00CAA05B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA12E526231FD3BD00CAA05B /* PrebidMobile.framework */,
-				FA12E528231FD3BD00CAA05B /* PrebidMobileTests.xctest */,
+				FA12E526231FD3BD00CAA05B /* SilverMobSdk.framework */,
+				FA12E528231FD3BD00CAA05B /* SilverMobSdkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -570,7 +570,7 @@
 			projectReferences = (
 				{
 					ProductGroup = FA12E521231FD3BD00CAA05B /* Products */;
-					ProjectRef = FA12E520231FD3BD00CAA05B /* PrebidMobile.xcodeproj */;
+					ProjectRef = FA12E520231FD3BD00CAA05B /* SilverMobSdk.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -581,17 +581,17 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		FA12E526231FD3BD00CAA05B /* PrebidMobile.framework */ = {
+		FA12E526231FD3BD00CAA05B /* SilverMobSdk.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = PrebidMobile.framework;
+			path = SilverMobSdk.framework;
 			remoteRef = FA12E525231FD3BD00CAA05B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FA12E528231FD3BD00CAA05B /* PrebidMobileTests.xctest */ = {
+		FA12E528231FD3BD00CAA05B /* SilverMobSdkTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = PrebidMobileTests.xctest;
+			path = SilverMobSdkTests.xctest;
 			remoteRef = FA12E527231FD3BD00CAA05B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -740,7 +740,7 @@
 /* Begin PBXTargetDependency section */
 		FAC9E2072327EFB000113B04 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = PrebidMobile;
+			name = SilverMobSdk;
 			targetProxy = FAC9E2062327EFB000113B04 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */

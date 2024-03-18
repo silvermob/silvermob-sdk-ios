@@ -14,8 +14,8 @@
  */
 
 import UIKit
-import PrebidMobile
-import PrebidMobileMAXAdapters
+import SilverMobSdk
+import SilverMobSdkMAXAdapters
 import AppLovinSDK
 
 fileprivate let storedImpVideoRewarded = "prebid-demo-video-rewarded-320-480"

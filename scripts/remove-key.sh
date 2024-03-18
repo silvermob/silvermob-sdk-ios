@@ -1,4 +1,4 @@
 #!/bin/sh
 
 security delete-keychain ios-build.keychain
-rm -f ~/Library/MobileDevice/Provisioning\ Profiles/PrebidMobileDemo.mobileprovision
+rm -f ~/Library/MobileDevice/Provisioning\ Profiles/SilverMobSdkDemo.mobileprovision

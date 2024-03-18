@@ -3,11 +3,11 @@
 To build the Prebid Mobile framework run:
 
 ```
-./buildPrebidMobile.sh
+./buildSilverMobSdk.sh
 ```
 
 To test the Prebid Mobile framework run:
 
 ```
-./testPrebidMobile.sh
+./testSilverMobSdk.sh
 ```

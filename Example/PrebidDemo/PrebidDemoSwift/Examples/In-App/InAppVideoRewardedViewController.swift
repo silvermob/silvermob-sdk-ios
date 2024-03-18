@@ -14,7 +14,7 @@
  */
 
 import UIKit
-import PrebidMobile
+import SilverMobSdk
 
 fileprivate let storedImpVideoRewarded = "prebid-demo-video-rewarded-320-480"
 

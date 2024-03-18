@@ -16,7 +16,7 @@
 #import "GAMOriginalAPIVideoBannerViewController.h"
 #import "PrebidDemoMacros.h"
 
-@import PrebidMobile;
+@import SilverMobSdk;
 @import GoogleMobileAds;
 
 NSString * const storedImpVideoBanner = @"prebid-demo-video-outstream-original-api";

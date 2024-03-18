@@ -14,9 +14,9 @@
  */
 
 import UIKit
-import PrebidMobile
+import SilverMobSdk
 import GoogleMobileAds
-import PrebidMobileAdMobAdapters
+import SilverMobSdkAdMobAdapters
 
 fileprivate let storedImpVideoBanner = "prebid-demo-video-outstream"
 fileprivate let adMobAdUnitDisplayBannerRendering = "ca-app-pub-5922967660082475/9483570409"

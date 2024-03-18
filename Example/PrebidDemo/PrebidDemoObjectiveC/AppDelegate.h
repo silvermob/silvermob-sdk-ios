@@ -15,13 +15,13 @@
 
 #import <UIKit/UIKit.h>
 
-@import PrebidMobile;
+@import SilverMobSdk;
 @import GoogleMobileAds;
 @import AppLovinSDK;
 
-@import PrebidMobileGAMEventHandlers;
-@import PrebidMobileAdMobAdapters;
-@import PrebidMobileMAXAdapters;
+@import SilverMobSdkGAMEventHandlers;
+@import SilverMobSdkAdMobAdapters;
+@import SilverMobSdkMAXAdapters;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

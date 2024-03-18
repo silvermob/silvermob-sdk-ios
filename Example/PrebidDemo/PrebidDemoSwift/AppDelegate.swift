@@ -18,10 +18,10 @@ import UIKit
 import GoogleMobileAds
 import AppLovinSDK
 
-import PrebidMobile
-import PrebidMobileGAMEventHandlers
-import PrebidMobileAdMobAdapters
-import PrebidMobileMAXAdapters
+import SilverMobSdk
+import SilverMobSdkGAMEventHandlers
+import SilverMobSdkAdMobAdapters
+import SilverMobSdkMAXAdapters
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

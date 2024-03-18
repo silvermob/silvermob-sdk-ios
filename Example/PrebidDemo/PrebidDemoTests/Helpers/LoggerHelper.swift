@@ -14,7 +14,7 @@
   */
 
 import Foundation
-import PrebidMobile
+import SilverMobSdk
 
 class LoggerHelper {
     

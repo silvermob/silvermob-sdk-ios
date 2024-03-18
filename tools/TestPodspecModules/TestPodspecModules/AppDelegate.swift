@@ -10,7 +10,7 @@ import UIKit
 import GoogleMobileAds
 import MoPubSDK
 
-import PrebidMobileRendering
+import SilverMobSdkRendering
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

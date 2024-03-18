@@ -14,9 +14,9 @@
  */
 
 import UIKit
-import PrebidMobile
+import SilverMobSdk
 import GoogleMobileAds
-import PrebidMobileAdMobAdapters
+import SilverMobSdkAdMobAdapters
 
 fileprivate let storedImpVideoRewarded = "prebid-demo-video-rewarded-320-480"
 fileprivate let adMobAdUnitRewardedId = "ca-app-pub-5922967660082475/7397370641"

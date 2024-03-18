@@ -14,8 +14,8 @@
  */
 
 import UIKit
-import PrebidMobile
-import PrebidMobileMAXAdapters
+import SilverMobSdk
+import SilverMobSdkMAXAdapters
 import AppLovinSDK
 
 fileprivate let storedImpVideoBanner = "prebid-demo-video-outstream"

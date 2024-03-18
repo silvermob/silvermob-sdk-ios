@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-@import PrebidMobile;
+@import SilverMobSdk;
 @import GoogleMobileAds;
 
 #import <Foundation/Foundation.h>

@@ -18,10 +18,10 @@
 #import <AdSupport/AdSupport.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <UIKit/UIKit.h>
-@import PrebidMobile;
+@import SilverMobSdk;
 
 
-static NSString *const kPrebidMobileVersion = @"0.5.3";
+static NSString *const kSilverMobSdkVersion = @"0.5.3";
 
 @implementation DemandRequestBuilder
 
@@ -144,7 +144,7 @@ static NSString *const kPrebidMobileVersion = @"0.5.3";
     }
     
     app[@"publisher"] = @{@"id": accountId};
-    app[@"ext"] = @{@"prebid" : @{@"version" : kPrebidMobileVersion, @"source" : @"prebid-mobile"}};
+    app[@"ext"] = @{@"prebid" : @{@"version" : kSilverMobSdkVersion, @"source" : @"prebid-mobile"}};
     
     return [app copy];
 }

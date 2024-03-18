@@ -20,7 +20,7 @@
 #import "DemandRequestBuilder.h"
 #import "AppDelegate.h"
 
-@import PrebidMobile;
+@import SilverMobSdk;
 
 @interface DemandValidator()
 @property NSInteger testsHasResponded;

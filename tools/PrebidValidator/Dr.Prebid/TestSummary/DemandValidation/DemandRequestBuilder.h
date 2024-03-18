@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@import PrebidMobile;
+@import SilverMobSdk;
 
 @interface DemandRequestBuilder : NSObject
 

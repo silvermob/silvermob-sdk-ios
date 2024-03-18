@@ -3,12 +3,12 @@
 
 **/out
 **/Payload/
-**/PrebidMobileDemo.app/
+**/SilverMobSdkDemo.app/
 **/Products
 **/example/Swift/PrebidDemo/Pods/
 **/example/ObjectiveC/PrebidDemo/Pods/
 **/screenshot*
-PrebidMobile.framework
+SilverMobSdk.framework
 
 ########################################################################################
 # macOS.gitignore

@@ -15,8 +15,8 @@
 
 import UIKit
 import GoogleMobileAds
-import PrebidMobile
-import PrebidMobileGAMEventHandlers
+import SilverMobSdk
+import SilverMobSdkGAMEventHandlers
 
 fileprivate let storedImpVideoRewarded = "prebid-demo-video-rewarded-320-480"
 fileprivate let gamAdUnitVideoRewardedRendering = "/21808260008/prebid_oxb_rewarded_video_test"

@@ -12,7 +12,7 @@ Easily include the Prebid Mobile SDK for your primary ad server in your Podfile/
 platform :ios, '11.0'
 
 target 'MyAmazingApp' do 
-    pod 'PrebidMobile'
+    pod 'SilverMobSdk'
 end
 ```
 
@@ -21,7 +21,7 @@ end
 Build Prebid Mobile from source code. After cloning the repo, from the root directory run
 
 ```
-./scripts/buildPrebidMobile.sh
+./scripts/buildSilverMobSdk.sh
 ```
 
 to output the Prebid Mobile framework.
@@ -32,20 +32,20 @@ to output the Prebid Mobile framework.
 Run the test script to run unit tests and integration tests.
 
 ```
-./scripts/testPrebidMobile.sh
+./scripts/testSilverMobSdk.sh
 ```
 
 
 ## Carthage
 
-`2.1.6` version is available to build PrebidMobile with Carthage. For that, please, put the following content to your `Cartfile`:
+`2.1.6` version is available to build SilverMobSdk with Carthage. For that, please, put the following content to your `Cartfile`:
 
 ```
 github "prebid/prebid-mobile-ios" == 2.2.0-carthage
 ```
-Run this command in order to build PrebidMobile with Carthage:
+Run this command in order to build SilverMobSdk with Carthage:
 
 ```
 carthage update --use-xcframeworks --platform ios
 ```
-Note that `PrebidMobileGAMEventHandlers`, `PrebidMobileAdMobAdapters`, `PrebidMobileMAXAdapters` are not available to build with Carthage.
+Note that `SilverMobSdkGAMEventHandlers`, `SilverMobSdkAdMobAdapters`, `SilverMobSdkMAXAdapters` are not available to build with Carthage.

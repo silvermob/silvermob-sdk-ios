@@ -1,8 +1,8 @@
 platform :ios, '12.0'
 
-workspace 'PrebidMobile'
+workspace 'SilverMobSdk'
 
-project 'PrebidMobile.xcodeproj'
+project 'SilverMobSdk.xcodeproj'
 project 'EventHandlers/EventHandlers.xcodeproj'
 project 'Example/PrebidDemo/PrebidDemo.xcodeproj'
 project 'tools/PrebidValidator/Dr.Prebid.xcodeproj'
@@ -40,33 +40,33 @@ def internalTestApp_pods
   gma_pods
 end
 
-target 'PrebidMobileGAMEventHandlers' do
+target 'SilverMobSdkGAMEventHandlers' do
   event_handlers_project
   gma_pods
 end
 
-target 'PrebidMobileGAMEventHandlersTests' do
+target 'SilverMobSdkGAMEventHandlersTests' do
   event_handlers_project
   gma_pods
 end
 
-target 'PrebidMobileAdMobAdapters' do
+target 'SilverMobSdkAdMobAdapters' do
   event_handlers_project
   gma_pods
   
 end
 
-target 'PrebidMobileAdMobAdaptersTests' do
+target 'SilverMobSdkAdMobAdaptersTests' do
   event_handlers_project
   gma_pods
 end
 
-target 'PrebidMobileMAXAdapters' do
+target 'SilverMobSdkMAXAdapters' do
   event_handlers_project
   applovin_pods
 end
 
-target 'PrebidMobileMAXAdaptersTests' do
+target 'SilverMobSdkMAXAdaptersTests' do
   event_handlers_project
   applovin_pods
 end

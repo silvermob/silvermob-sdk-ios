@@ -14,8 +14,8 @@
  */
 
 import UIKit
-import PrebidMobile
-import PrebidMobileMAXAdapters
+import SilverMobSdk
+import SilverMobSdkMAXAdapters
 import AppLovinSDK
 
 fileprivate let storedImpDisplayInterstitial = "prebid-demo-display-interstitial-320-480"

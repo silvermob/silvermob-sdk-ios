@@ -14,9 +14,9 @@
  */
 
 import UIKit
-import PrebidMobile
+import SilverMobSdk
 import GoogleMobileAds
-import PrebidMobileAdMobAdapters
+import SilverMobSdkAdMobAdapters
 
 fileprivate let storedImpVideoInterstitial = "prebid-demo-video-interstitial-320-480"
 fileprivate let adMobAdUnitDisplayInterstitial = "ca-app-pub-5922967660082475/3383099861"

@@ -16,8 +16,8 @@
 #import "NativeBaseViewController.h"
 
 @import GoogleMobileAds;
-@import PrebidMobile;
-@import PrebidMobileAdMobAdapters;
+@import SilverMobSdk;
+@import SilverMobSdkAdMobAdapters;
 
 NS_ASSUME_NONNULL_BEGIN
 

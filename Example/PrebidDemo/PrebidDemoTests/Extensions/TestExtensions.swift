@@ -14,7 +14,7 @@
  */
 
 import UIKit
-@testable import PrebidMobile
+@testable import SilverMobSdk
 
 extension UIWindow {
     static var key: UIWindow? {

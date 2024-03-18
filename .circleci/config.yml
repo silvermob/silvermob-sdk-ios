@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Build Frameworks
-          command: scripts/buildPrebidMobile.sh
+          command: scripts/buildSilverMobSdk.sh
 
   unit-test:
     macos:
@@ -17,7 +17,7 @@ jobs:
       - checkout
       - run:
           name: Run Unit Tests for Frameworks
-          command: scripts/testPrebidMobile.sh -l
+          command: scripts/testSilverMobSdk.sh -l
           
   run-swift-demo-integration-tests:
     macos:
@@ -42,9 +42,9 @@ workflows:
   pr-check:
     jobs: 
       - build:
-         name: Build PrebidMobile Frameworks
+         name: Build SilverMobSdk Frameworks
       - unit-test:
-         name: Run Unit Tests for PrebidMobile Frameworks
+         name: Run Unit Tests for SilverMobSdk Frameworks
       - run-swift-demo-integration-tests:
          name: Run Intgration Tests - Swift Demo App
       - run-swift-demo-ui-tests:

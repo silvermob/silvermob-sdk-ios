@@ -14,7 +14,7 @@
  */
 
 import UIKit
-import PrebidMobile
+import SilverMobSdk
 import GoogleMobileAds
 
 fileprivate let storedImpDisplayBanner = "prebid-demo-banner-320-50"

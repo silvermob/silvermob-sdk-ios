@@ -15,7 +15,7 @@
 
 #import "BannerBaseViewController.h"
 
-@import PrebidMobile;
+@import SilverMobSdk;
 
 NS_ASSUME_NONNULL_BEGIN
 

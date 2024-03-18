@@ -15,7 +15,7 @@
  */
 
 #import <UIKit/UIKit.h>
-@import PrebidMobile;
+@import SilverMobSdk;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

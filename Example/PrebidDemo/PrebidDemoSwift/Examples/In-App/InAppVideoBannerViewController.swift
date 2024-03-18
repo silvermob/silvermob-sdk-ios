@@ -14,7 +14,7 @@
  */
 
 import UIKit
-import PrebidMobile
+import SilverMobSdk
 
 fileprivate let storedImpVideoBanner = "prebid-demo-video-outstream"
 

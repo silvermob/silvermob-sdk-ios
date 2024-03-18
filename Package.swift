@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
 
-    name: "PrebidMobile",
+    name: "SilverMobSdk",
 
     platforms: [
         .iOS(.v10)
@@ -14,14 +14,14 @@ let package = Package(
     products: [
         
         .library(
-            name: "PrebidMobile",
-            targets: ["PrebidMobile"])
+            name: "SilverMobSdk",
+            targets: ["SilverMobSdk"])
     ],
 
     targets: [
         .target(
-            name: "PrebidMobile",
-            path: "PrebidMobile"
+            name: "SilverMobSdk",
+            path: "SilverMobSdk"
         )
     ],
     

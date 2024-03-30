@@ -2,10 +2,10 @@ Pod::Spec.new do |s|
 
   s.name         = "SilverMobSdk"
   s.version      = "2.2.0"
-  s.summary      = "SilverMobSdk is an ad serving SDK based on the Prebid SDK."
+  s.summary      = "SilverMobSdk is an ads serving SDK for SilverMob ads."
 
   s.description  = <<-DESC
-    SilverMobSdk is an ad serving SDK based on the Prebid SDK."
+    SilverMobSdk is an ads serving SDK for SilverMob ads."
     DESC
   s.homepage     = "https://www.silvermob.com"
 

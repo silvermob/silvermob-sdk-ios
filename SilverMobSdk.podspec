@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
     SilverMobSdk is an ads serving SDK for SilverMob ads."
     DESC
-  s.homepage     = "https://www.silvermob.com"
+  s.homepage     = "https://silvermob.com"
 
 
   s.license      = { :type => "Apache License, Version 2.0", :text => <<-LICENSE

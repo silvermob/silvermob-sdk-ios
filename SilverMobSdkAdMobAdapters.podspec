@@ -4,8 +4,8 @@ Pod::Spec.new do |s|
   s.version      = "2.2.0"
   s.summary      = "The bridge between SilverMobSdk SDK and GMA SDK."
 
-  s.description  = "AdMob Adatpers manages rendering of Prebid ads in the case of integration with AdMob as a Primary Ad Server."
-  s.homepage     = "https://www.prebid.org"
+  s.description  = "The bridge between SilverMobSdk SDK and GMA SDK.""
+  s.homepage     = "https://silvermob.com"
 
 
   s.license      = { :type => "Apache License, Version 2.0", :text => <<-LICENSE
@@ -25,10 +25,10 @@ Pod::Spec.new do |s|
     LICENSE
     }
 
-  s.author        = { "Prebid.org, Inc." => "info@prebid.org" }
+  s.author        = { "ArtChaos s.r.o." => "contact@silvermob.com" }
   s.platform      = :ios, "11.0"
   s.swift_version = '5.0'
-  s.source        = { :git => "https://github.com/prebid/prebid-mobile-ios.git", :tag => "#{s.version}" }
+  s.source        = { :git => "https://github.com/silvermob/silvermob-sdk-ios.git", :tag => "#{s.version}" }
   s.xcconfig      = { :LIBRARY_SEARCH_PATHS => '$(inherited)',
 		      :OTHER_CFLAGS => '$(inherited)',
 		      :OTHER_LDFLAGS => '$(inherited)',

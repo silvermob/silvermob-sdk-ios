@@ -119,7 +119,7 @@
 
 - (BOOL)isVisibleView:(UIView *)view {
 #ifdef DEBUG
-    if (Prebid.shared.forcedIsViewable) {
+    if (SilverMob.shared.forcedIsViewable) {
         return YES;
     }
 #endif

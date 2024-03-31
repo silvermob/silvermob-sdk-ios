@@ -194,13 +194,13 @@
 - (void)handleClickthrough:(NSURL*)url {
     // Call overridden method with empty non-null closures
     [self handleClickthrough:url
-            sdkConfiguration:Prebid.shared
+            sdkConfiguration:SilverMob.shared
            completionHandler:^(BOOL success){}
                       onExit:^{}];
 }
 
 - (void)handleClickthrough:(NSURL*)url
-          sdkConfiguration:(Prebid *)sdkConfiguration {
+          sdkConfiguration:(SilverMob *)sdkConfiguration {
     [self handleClickthrough:url
             sdkConfiguration:sdkConfiguration
            completionHandler:^(BOOL success){}
@@ -211,13 +211,13 @@
          completionHandler:(void (^)(BOOL success))completion
                     onExit:(PBMVoidBlock)onClickthroughExitBlock {
     [self handleClickthrough:url
-            sdkConfiguration:Prebid.shared
+            sdkConfiguration:SilverMob.shared
            completionHandler:completion
                       onExit:onClickthroughExitBlock];
 }
 
 - (void)handleClickthrough:(NSURL*)url
-          sdkConfiguration:(Prebid *)sdkConfiguration
+          sdkConfiguration:(SilverMob *)sdkConfiguration
          completionHandler:(void (^)(BOOL success))completion
                     onExit:(PBMVoidBlock)onClickthroughExitBlock {
     
@@ -258,7 +258,7 @@
 //checks the given URL and process it if it's a deep link
 //return YES if the given URL is deeplink
 - (BOOL)handleDeepLinkIfNeeded:(NSURL*)url
-              sdkConfiguration:(Prebid *)sdkConfiguration
+              sdkConfiguration:(SilverMob *)sdkConfiguration
              completionHandler:(void (^)(BOOL success))completion
                         onExit:(PBMVoidBlock)onClickthroughExitBlock {
     NSURL *effectiveURL = url;
@@ -305,7 +305,7 @@
 
 //Returns true if the clickthrough is presented
 - (BOOL)handleNormalClickthrough:(NSURL *)url
-                sdkConfiguration:(Prebid *)sdkConfiguration
+                sdkConfiguration:(SilverMob *)sdkConfiguration
                           onExit:(nonnull PBMVoidBlock)onClickthroughExitBlock {
     
     @weakify(self);

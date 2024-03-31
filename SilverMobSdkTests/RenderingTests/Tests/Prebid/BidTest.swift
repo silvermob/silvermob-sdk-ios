@@ -22,7 +22,7 @@ class BidTest: XCTestCase {
     override func tearDown() {
         super.tearDown()
         
-        Prebid.reset()
+        SilverMob.reset()
     }
     
     func testWinningBidMarkers_hb_pb_noWinningBid() {
@@ -44,13 +44,13 @@ class BidTest: XCTestCase {
     }
     
     func testNoWinningBid_hb_cache_id() {
-        Prebid.shared.useCacheForReportingWithRenderingAPI = true
+        SilverMob.shared.useCacheForReportingWithRenderingAPI = true
         let bid = RawWinningBidFabricator.makeWinningBid(price: 0.75, bidder: "some bidder", cacheID: nil)
         XCTAssertFalse(bid.isWinning)
     }
     
     func testWinningBid_with_hb_cache_id() {
-        Prebid.shared.useCacheForReportingWithRenderingAPI = true
+        SilverMob.shared.useCacheForReportingWithRenderingAPI = true
         let bid = RawWinningBidFabricator.makeWinningBid(price: 0.75, bidder: "some bidder", cacheID: "cache/id")
         XCTAssertTrue(bid.isWinning)
     }

@@ -20,7 +20,7 @@ fileprivate let defaultTimeoutMillis = 2000
 public typealias PrebidInitializationCallback = ((PrebidInitializationStatus, Error?) -> Void)
 
 @objcMembers
-public class Prebid: NSObject {
+public class SilverMob: NSObject {
     
     // MARK: - Public Properties (SDK)
     
@@ -60,7 +60,7 @@ public class Prebid: NSObject {
      */
     public var externalUserIdArray = [ExternalUserId]()
     
-    public static let shared = Prebid()
+    public static let shared = SilverMob()
     
     public var version: String {
         PBMFunctions.sdkVersion()
@@ -153,7 +153,7 @@ public class Prebid: NSObject {
     public func getStoredBidResponses() -> [[String: String]]? {
         var storedBidResponses: [[String: String]] = []
         
-        for(bidder, responseId) in Prebid.shared.storedBidResponses {
+        for(bidder, responseId) in SilverMob.shared.storedBidResponses {
             var storedBidResponse: [String: String] = [:]
             storedBidResponse["bidder"] = bidder
             storedBidResponse["id"] = responseId

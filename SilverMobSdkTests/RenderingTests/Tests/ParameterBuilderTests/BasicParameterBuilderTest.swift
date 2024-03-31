@@ -37,7 +37,7 @@ class PBMBasicParameterBuilderTest: XCTestCase {
         UserDefaults.standard.removeObject(forKey: InternalUserConsentDataManager.IABGPP_HDR_GppString)
         UserDefaults.standard.removeObject(forKey: InternalUserConsentDataManager.IABGPP_GppSID)
         
-        Prebid.shared.useExternalClickthroughBrowser = false
+        SilverMob.shared.useExternalClickthroughBrowser = false
         
         UserConsentDataManager.shared.subjectToCOPPA = nil
         super.tearDown()
@@ -48,7 +48,7 @@ class PBMBasicParameterBuilderTest: XCTestCase {
         let adConfiguration = AdConfiguration()
         adConfiguration.isInterstitialAd = false
         
-        let sdkConfiguration = Prebid.mock
+        let sdkConfiguration = SilverMob.mock
         let builder = PBMBasicParameterBuilder(adConfiguration:adConfiguration,
                                                sdkConfiguration:sdkConfiguration,
                                                sdkVersion:"MOCK_SDK_VERSION",
@@ -85,7 +85,7 @@ class PBMBasicParameterBuilderTest: XCTestCase {
     func testParameterBuilderExternalBrowser() {
         let adConfiguration = AdConfiguration()
         
-        let sdkConfiguration = Prebid.mock
+        let sdkConfiguration = SilverMob.mock
         sdkConfiguration.useExternalClickthroughBrowser = true
         let builder = PBMBasicParameterBuilder(adConfiguration:adConfiguration,
                                                sdkConfiguration:sdkConfiguration,
@@ -106,7 +106,7 @@ class PBMBasicParameterBuilderTest: XCTestCase {
     func testDisplayManager_OriginalAPI() {
         let adConfiguration = AdConfiguration()
         adConfiguration.isOriginalAPI = true
-        let sdkConfiguration = Prebid.mock
+        let sdkConfiguration = SilverMob.mock
         
         let builder = PBMBasicParameterBuilder(adConfiguration:adConfiguration,
                                                sdkConfiguration:sdkConfiguration,
@@ -128,7 +128,7 @@ class PBMBasicParameterBuilderTest: XCTestCase {
     func testDisplayManager_RenderingAPI() {
         let adConfiguration = AdConfiguration()
         adConfiguration.isOriginalAPI = false
-        let sdkConfiguration = Prebid.mock
+        let sdkConfiguration = SilverMob.mock
         
         let builder = PBMBasicParameterBuilder(adConfiguration:adConfiguration,
                                                sdkConfiguration:sdkConfiguration,
@@ -172,7 +172,7 @@ class PBMBasicParameterBuilderTest: XCTestCase {
         let adConfiguration = AdConfiguration()
         adConfiguration.isInterstitialAd = false
         
-        let sdkConfiguration = Prebid.mock
+        let sdkConfiguration = SilverMob.mock
         let builder = PBMBasicParameterBuilder(adConfiguration:adConfiguration,
                                                sdkConfiguration:sdkConfiguration,
                                                sdkVersion:"MOCK_SDK_VERSION",
@@ -201,7 +201,7 @@ class PBMBasicParameterBuilderTest: XCTestCase {
             targeting.coppa = coppa
         }
         
-        let sdkConfiguration = Prebid.mock
+        let sdkConfiguration = SilverMob.mock
         let builder = PBMBasicParameterBuilder(adConfiguration:adConfiguration,
                                                sdkConfiguration:sdkConfiguration,
                                                sdkVersion:"MOCK_SDK_VERSION",
@@ -218,7 +218,7 @@ class PBMBasicParameterBuilderTest: XCTestCase {
     func testInvalidProperties() {
         let adConfiguration = AdConfiguration()
         
-        let sdkConfiguration = Prebid.mock
+        let sdkConfiguration = SilverMob.mock
         let bidRequest = PBMORTBBidRequest()
         
         let builder = PBMBasicParameterBuilder(adConfiguration:adConfiguration,
@@ -286,7 +286,7 @@ class PBMBasicParameterBuilderTest: XCTestCase {
             adConfiguration = adUnit.adUnitConfig.adConfiguration
         }
         
-        let sdkConfiguration = Prebid.mock
+        let sdkConfiguration = SilverMob.mock
         let builder = PBMBasicParameterBuilder(adConfiguration:adConfiguration,
                                                sdkConfiguration:sdkConfiguration,
                                                sdkVersion:"MOCK_SDK_VERSION",
@@ -314,7 +314,7 @@ class PBMBasicParameterBuilderTest: XCTestCase {
         targeting.addParam("rab", withName: "foo")
         adConfiguration.isInterstitialAd = false
         
-        let sdkConfiguration = Prebid.mock
+        let sdkConfiguration = SilverMob.mock
         let builder = PBMBasicParameterBuilder(adConfiguration:adConfiguration,
                                                sdkConfiguration:sdkConfiguration,
                                                sdkVersion:"MOCK_SDK_VERSION",
@@ -333,7 +333,7 @@ class PBMBasicParameterBuilderTest: XCTestCase {
         let adConfiguration = AdConfiguration()
         adConfiguration.adFormats = [.display]
         
-        let sdkConfiguration = Prebid.mock
+        let sdkConfiguration = SilverMob.mock
         let builder = PBMBasicParameterBuilder(adConfiguration:adConfiguration,
                                                sdkConfiguration:sdkConfiguration,
                                                sdkVersion:"MOCK_SDK_VERSION",
@@ -356,7 +356,7 @@ class PBMBasicParameterBuilderTest: XCTestCase {
         
         // Create Builder
         let adConfiguration = AdConfiguration()
-        let sdkConfiguration = Prebid.mock
+        let sdkConfiguration = SilverMob.mock
         let builder = PBMBasicParameterBuilder(adConfiguration:adConfiguration,
                                                sdkConfiguration:sdkConfiguration,
                                                sdkVersion:"MOCK_SDK_VERSION",
@@ -375,7 +375,7 @@ class PBMBasicParameterBuilderTest: XCTestCase {
     // MARK: - Helpers
     
     func checkDefaultParametersForAdUnit(adConfiguration: AdConfiguration) {
-        let sdkConfiguration = Prebid.mock
+        let sdkConfiguration = SilverMob.mock
         
         let builder = PBMBasicParameterBuilder(adConfiguration:adConfiguration,
                                                sdkConfiguration:sdkConfiguration,

@@ -35,7 +35,7 @@
 
 @interface PBMSafariVCOpener ()
 
-@property (nonatomic, strong, nonnull, readonly) Prebid *sdkConfiguration;
+@property (nonatomic, strong, nonnull, readonly) SilverMob *sdkConfiguration;
 @property (nonatomic, strong, nonnull, readonly) PBMModalManager *modalManager;
 
 @property (nonatomic, strong, nonnull, readonly) PBMViewControllerProvider viewControllerProvider;
@@ -55,7 +55,7 @@
 
 @implementation PBMSafariVCOpener
 
-- (instancetype)initWithSDKConfiguration:(Prebid *)sdkConfiguration
+- (instancetype)initWithSDKConfiguration:(SilverMob *)sdkConfiguration
                             modalManager:(PBMModalManager *)modalManager
                   viewControllerProvider:(PBMViewControllerProvider)viewControllerProvider
               measurementSessionProvider:(PBMOpenMeasurementSessionProvider)measurementSessionProvider

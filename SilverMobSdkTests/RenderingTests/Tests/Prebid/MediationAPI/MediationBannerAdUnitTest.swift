@@ -24,10 +24,10 @@ class MediationBannerAdUnitTest: XCTestCase {
     let testID = "auid"
     let primarySize = CGSize(width: 320, height: 50)
     
-    private func getSDKConfiguration() -> Prebid {
-        let config = Prebid.mock
-        try! config.setCustomPrebidServer(url: Prebid.devintServerURL)
-        config.prebidServerAccountId = Prebid.devintAccountID
+    private func getSDKConfiguration() -> SilverMob {
+        let config = SilverMob.mock
+        try! config.setCustomPrebidServer(url: SilverMob.devintServerURL)
+        config.prebidServerAccountId = SilverMob.devintAccountID
         return config
     }
     

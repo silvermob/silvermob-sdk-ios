@@ -21,7 +21,7 @@ class AdUnitTests: XCTestCase {
 
     override func tearDown() {
         Targeting.shared.clearUserKeywords()
-        Prebid.shared.useExternalClickthroughBrowser = false
+        SilverMob.shared.useExternalClickthroughBrowser = false
     }
 
     func testFetchDemand() {
@@ -116,10 +116,10 @@ class AdUnitTests: XCTestCase {
     }
     
     func testBidInfoCompletion() {
-        Prebid.shared.prebidServerAccountId = "test-account-id"
+        SilverMob.shared.prebidServerAccountId = "test-account-id"
         
         defer {
-            Prebid.shared.prebidServerAccountId = ""
+            SilverMob.shared.prebidServerAccountId = ""
         }
         
         guard let json = UtilitiesForTesting.loadFileAsDictFromBundle("sample_ortb_native_with_win_event.json") as SilverMobSdk.JsonDictionary? else {
@@ -159,8 +159,8 @@ class AdUnitTests: XCTestCase {
         exception.expectedFulfillmentCount = expectedFetchDemandCount
         exception.assertForOverFulfill = false
         
-        Prebid.shared.prebidServerHost = PrebidHost.Rubicon
-        Prebid.shared.prebidServerAccountId = "1001"
+        SilverMob.shared.prebidServerHost = PrebidHost.Rubicon
+        SilverMob.shared.prebidServerAccountId = "1001"
         let adUnit = BannerAdUnit(configId: "1001-1", size: CGSize(width: 300, height: 250))
         adUnit.setAutoRefreshMillis(time: 800.0)
         let testObject: AnyObject = () as AnyObject
@@ -197,8 +197,8 @@ class AdUnitTests: XCTestCase {
         exception.expectedFulfillmentCount = expectedFetchDemandCount
         exception.assertForOverFulfill = false
         
-        Prebid.shared.prebidServerHost = PrebidHost.Rubicon
-        Prebid.shared.prebidServerAccountId = "1001"
+        SilverMob.shared.prebidServerHost = PrebidHost.Rubicon
+        SilverMob.shared.prebidServerAccountId = "1001"
         let adUnit = BannerAdUnit(configId: "1001-1", size: CGSize(width: 300, height: 250))
         adUnit.setAutoRefreshMillis(time: 800.0)
         let testObject: AnyObject = () as AnyObject
@@ -239,8 +239,8 @@ class AdUnitTests: XCTestCase {
         exception.expectedFulfillmentCount = expectedFetchDemandCount
         exception.assertForOverFulfill = false
         
-        Prebid.shared.prebidServerHost = PrebidHost.Rubicon
-        Prebid.shared.prebidServerAccountId = "1001"
+        SilverMob.shared.prebidServerHost = PrebidHost.Rubicon
+        SilverMob.shared.prebidServerAccountId = "1001"
         let adUnit = BannerAdUnit(configId: "1001-1", size: CGSize(width: 300, height: 250))
         adUnit.setAutoRefreshMillis(time: 800.0)
         

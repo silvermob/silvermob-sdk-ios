@@ -17,7 +17,7 @@
 
 @class PBMVastParser;
 @class PBMVastResponse;
-@class Prebid;
+@class SilverMob;
 @class PBMVastAbstractAd;
 
 @protocol PrebidServerConnectionProtocol;

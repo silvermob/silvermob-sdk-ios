@@ -49,7 +49,7 @@ class AdViewManagerTest: XCTestCase, PBMAdViewManagerDelegate {
         adViewManager = PBMAdViewManager(connection: PrebidServerConnection(), modalManagerDelegate: nil)
         
         adViewManager.adViewManagerDelegate = self
-        Prebid.forcedIsViewable = false
+        SilverMob.forcedIsViewable = false
         loadError = nil;
     }
     
@@ -77,7 +77,7 @@ class AdViewManagerTest: XCTestCase, PBMAdViewManagerDelegate {
         
         nilExpectations()
         
-        Prebid.reset()
+        SilverMob.reset()
         
         super.tearDown()
     }
@@ -107,7 +107,7 @@ class AdViewManagerTest: XCTestCase, PBMAdViewManagerDelegate {
         viewControllerForModalPresentationExpectation = expectation(description: "Expected a viewControllerForModalPresentationExpectation delegate to fire")
         
         //Force viewability
-        Prebid.forcedIsViewable = true
+        SilverMob.forcedIsViewable = true
         
         let transaction = UtilitiesForTesting.createTransactionWithHTMLCreative(withView: true)
         adViewManager.handleExternalTransaction(transaction)
@@ -121,7 +121,7 @@ class AdViewManagerTest: XCTestCase, PBMAdViewManagerDelegate {
         adLoadedExpectation = expectation(description: "Expected a delegate function adLoaded to fire")
         
         //Force viewability
-        Prebid.forcedIsViewable = true
+        SilverMob.forcedIsViewable = true
         
         adViewManager.handleExternalTransaction(UtilitiesForTesting.createTransactionWithHTMLCreative(withView: true, isInterstitial: true))
         
@@ -151,7 +151,7 @@ class AdViewManagerTest: XCTestCase, PBMAdViewManagerDelegate {
         viewControllerForModalPresentationExpectation = expectation(description: "Expected a viewControllerForModalPresentationExpectation delegate to fire")
         
         //Force viewability
-        Prebid.forcedIsViewable = true
+        SilverMob.forcedIsViewable = true
         
         // create an ad with one creative
         adViewManager.handleExternalTransaction(UtilitiesForTesting.createTransactionWithHTMLCreative(withView: true))
@@ -188,7 +188,7 @@ class AdViewManagerTest: XCTestCase, PBMAdViewManagerDelegate {
         viewControllerForModalPresentationExpectation = expectation(description: "Expected a viewControllerForModalPresentationExpectation delegate to fire")
         
         //Force viewability
-        Prebid.forcedIsViewable = true
+        SilverMob.forcedIsViewable = true
         
         adViewManager.handleExternalTransaction(UtilitiesForTesting.createTransactionWithHTMLCreative(withView: true))
         XCTAssertNotNil(adViewManager.externalTransaction)

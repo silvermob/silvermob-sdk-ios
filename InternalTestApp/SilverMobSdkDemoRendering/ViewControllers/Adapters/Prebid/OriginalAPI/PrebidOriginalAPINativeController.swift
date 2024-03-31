@@ -50,7 +50,7 @@ class PrebidOriginalAPINativeController: NSObject, AdaptedController, GADAdLoade
     }
     
     deinit {
-        Prebid.shared.shouldAssignNativeAssetID = false
+        SilverMob.shared.shouldAssignNativeAssetID = false
     }
     
     func setupNativeAdView(_ nativeAdViewBox: NativeAdViewBoxProtocol) {

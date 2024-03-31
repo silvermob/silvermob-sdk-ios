@@ -68,7 +68,7 @@ class PrebidMAXInterstitialController: NSObject, AdaptedController, PrebidConfig
     
     func loadAd() {
         if let storedAuctionResponse = storedAuctionResponse {
-            Prebid.shared.storedAuctionResponse = storedAuctionResponse
+            SilverMob.shared.storedAuctionResponse = storedAuctionResponse
         }
         
         configIdLabel.isHidden = false

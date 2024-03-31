@@ -39,7 +39,7 @@
 @interface PBMPrebidParameterBuilder ()
 
 @property (nonatomic, strong, nonnull, readonly) AdUnitConfig *adConfiguration;
-@property (nonatomic, strong, nonnull, readonly) Prebid *sdkConfiguration;
+@property (nonatomic, strong, nonnull, readonly) SilverMob *sdkConfiguration;
 @property (nonatomic, strong, nonnull, readonly) Targeting *targeting;
 @property (nonatomic, strong, nonnull, readonly) PBMUserAgentService *userAgentService;
 
@@ -48,7 +48,7 @@
 @implementation PBMPrebidParameterBuilder
 
 - (instancetype)initWithAdConfiguration:(AdUnitConfig *)adConfiguration
-                       sdkConfiguration:(Prebid *)sdkConfiguration
+                       sdkConfiguration:(SilverMob *)sdkConfiguration
                               targeting:(Targeting *)targeting
                        userAgentService:(PBMUserAgentService *)userAgentService
 {
@@ -70,12 +70,12 @@
     
     bidRequest.requestID = [NSUUID UUID].UUIDString;
     bidRequest.extPrebid.storedRequestID        = self.sdkConfiguration.prebidServerAccountId;
-    bidRequest.extPrebid.storedAuctionResponse  = Prebid.shared.storedAuctionResponse;
+    bidRequest.extPrebid.storedAuctionResponse  = SilverMob.shared.storedAuctionResponse;
     bidRequest.extPrebid.dataBidders            = self.targeting.accessControlList;
-    bidRequest.extPrebid.storedBidResponses     = [Prebid.shared getStoredBidResponses];
+    bidRequest.extPrebid.storedBidResponses     = [SilverMob.shared getStoredBidResponses];
     bidRequest.ortbObject = [self.adConfiguration.adConfiguration getCheckedOrtbConfig];
     
-    if (Prebid.shared.useCacheForReportingWithRenderingAPI) {
+    if (SilverMob.shared.useCacheForReportingWithRenderingAPI) {
         PBMMutableJsonDictionary * const cache = [PBMMutableJsonDictionary new];
         cache[@"bids"] = [PBMMutableJsonDictionary new];
         cache[@"vastxml"] = [PBMMutableJsonDictionary new];
@@ -88,12 +88,12 @@
         bidRequest.extPrebid.targeting[@"includeformat"] = [[NSNumber alloc] initWithBool:YES];
     }
 
-    if(Prebid.shared.includeWinners)
+    if(SilverMob.shared.includeWinners)
     {
         bidRequest.extPrebid.targeting[@"includewinners"] = [[NSNumber alloc] initWithBool:YES];
     }
 
-    if(Prebid.shared.includeBidderKeys)
+    if(SilverMob.shared.includeBidderKeys)
     {
         bidRequest.extPrebid.targeting[@"includebidderkeys"] = [[NSNumber alloc] initWithBool:YES];
     }
@@ -176,7 +176,7 @@
     for (PBMORTBImp *nextImp in bidRequest.imp) {
         nextImp.impID = [NSUUID UUID].UUIDString;
         nextImp.extPrebid.storedRequestID = self.adConfiguration.configId;
-        nextImp.extPrebid.storedAuctionResponse = Prebid.shared.storedAuctionResponse;
+        nextImp.extPrebid.storedAuctionResponse = SilverMob.shared.storedAuctionResponse;
         nextImp.extPrebid.isRewardedInventory = self.adConfiguration.adConfiguration.isOptIn;
         nextImp.extGPID = self.adConfiguration.gpid;
         
@@ -293,7 +293,7 @@
         }
         
         if (!appExtPrebid.version) {
-            appExtPrebid.version = Prebid.shared.version;
+            appExtPrebid.version = SilverMob.shared.version;
         }
     }
 }

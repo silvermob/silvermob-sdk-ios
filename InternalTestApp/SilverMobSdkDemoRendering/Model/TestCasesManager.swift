@@ -591,7 +591,7 @@ struct TestCaseManager {
                     return
                 }
                          
-                Prebid.shared.prebidServerAccountId = "prebid-stored-request-sdk-config"
+                SilverMob.shared.prebidServerAccountId = "prebid-stored-request-sdk-config"
                 
                 let bannerController = PrebidBannerController(rootController: adapterVC)
                 bannerController.adSizes = [CGSize(width: 320, height: 50)]
@@ -613,7 +613,7 @@ struct TestCaseManager {
                     return
                 }
                          
-                Prebid.shared.prebidServerAccountId = "prebid-stored-request-enabled-events"
+                SilverMob.shared.prebidServerAccountId = "prebid-stored-request-enabled-events"
                 
                 let bannerController = PrebidBannerController(rootController: adapterVC)
                 bannerController.adSizes = [CGSize(width: 320, height: 50)]
@@ -845,7 +845,7 @@ struct TestCaseManager {
                     return
                 }
                          
-                Prebid.shared.prebidServerAccountId = "prebid-stored-request-enabled-events"
+                SilverMob.shared.prebidServerAccountId = "prebid-stored-request-enabled-events"
                          
                 let gamBannerController = PrebidGAMBannerController(rootController: adapterVC)
                 gamBannerController.gamAdUnitId = "/21808260008/prebid_oxb_320x50_banner"
@@ -2410,7 +2410,7 @@ struct TestCaseManager {
                     return
                 }
                          
-                Prebid.shared.prebidServerAccountId = "prebid-stored-request-enabled-events"
+                SilverMob.shared.prebidServerAccountId = "prebid-stored-request-enabled-events"
                          
                 let admobBannerController = PrebidAdMobBannerViewController(rootController: adapterVC)
                 admobBannerController.adMobAdUnitId = "ca-app-pub-5922967660082475/9483570409"
@@ -2826,7 +2826,7 @@ struct TestCaseManager {
                     return
                 }
                          
-                Prebid.shared.prebidServerAccountId = "prebid-stored-request-enabled-events"
+                SilverMob.shared.prebidServerAccountId = "prebid-stored-request-enabled-events"
                          
                 let nativeController = PrebidAdMobNativeViewController(rootController: adapterVC)
                 nativeController.adMobAdUnitId = "ca-app-pub-5922967660082475/8634069303"
@@ -2886,7 +2886,7 @@ struct TestCaseManager {
                     return
                 }
                          
-                Prebid.shared.prebidServerAccountId = "prebid-stored-request-enabled-events"
+                SilverMob.shared.prebidServerAccountId = "prebid-stored-request-enabled-events"
                          
                 let nativeAdController = PrebidNativeAdController(rootController: adapterVC)
                 nativeAdController.setupNativeAdView(NativeAdViewBox())
@@ -2912,7 +2912,7 @@ struct TestCaseManager {
                 nativeAdController.setupNativeAdView(NativeAdViewBoxLinks())
                 nativeAdController.prebidConfigId = "prebid-demo-native-links"
                          
-                Prebid.shared.shouldAssignNativeAssetID = true
+                SilverMob.shared.shouldAssignNativeAssetID = true
                          
                 let sponsored = NativeAssetData(type: .sponsored, required: true)
                 let rating = NativeAssetData(type: .rating, required: true)
@@ -2983,7 +2983,7 @@ struct TestCaseManager {
                     return
                 }
                          
-                Prebid.shared.prebidServerAccountId = "prebid-stored-request-enabled-events"
+                SilverMob.shared.prebidServerAccountId = "prebid-stored-request-enabled-events"
                          
                 let gamNativeAdController = PrebidGAMNativeAdController(rootController: adapterVC)
 
@@ -3162,7 +3162,7 @@ struct TestCaseManager {
                     return
                 }
                          
-                Prebid.shared.prebidServerAccountId = "prebid-stored-request-enabled-events"
+                SilverMob.shared.prebidServerAccountId = "prebid-stored-request-enabled-events"
                          
                 let maxBannerController = PrebidMAXBannerController(rootController: adapterVC)
                 maxBannerController.maxAdUnitId = "5f111f4bcd0f58ca"
@@ -3579,7 +3579,7 @@ struct TestCaseManager {
                     return
                 }
                          
-                Prebid.shared.prebidServerAccountId = "prebid-stored-request-enabled-events"
+                SilverMob.shared.prebidServerAccountId = "prebid-stored-request-enabled-events"
                          
                 let nativeController = PrebidMAXNativeController(rootController: adapterVC)
                 nativeController.maxAdUnitId = "f4c3d8281ebf3c39"

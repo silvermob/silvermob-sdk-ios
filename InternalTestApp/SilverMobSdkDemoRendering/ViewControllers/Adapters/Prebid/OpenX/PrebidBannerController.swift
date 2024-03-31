@@ -172,7 +172,7 @@ class PrebidBannerController: NSObject, AdaptedController, PrebidConfigurableBan
                 $0.type == "prebidmobilesdk"
             }).first?.sdkConfiguration
             
-            if pbsSDKConfig?.cftBanner?.doubleValue != Prebid.shared.creativeFactoryTimeout || pbsSDKConfig?.cftPreRender?.doubleValue != Prebid.shared.creativeFactoryTimeoutPreRenderContent {
+            if pbsSDKConfig?.cftBanner?.doubleValue != SilverMob.shared.creativeFactoryTimeout || pbsSDKConfig?.cftPreRender?.doubleValue != SilverMob.shared.creativeFactoryTimeoutPreRenderContent {
                 resetEvents()
                 adViewDidFailToLoadAdButton.isEnabled = true
             }

@@ -24,7 +24,7 @@ class PBMAdLoadFlowControllerTest: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        Prebid.reset()
+        SilverMob.reset()
     }
     
     func testNoImmediateCalls() {

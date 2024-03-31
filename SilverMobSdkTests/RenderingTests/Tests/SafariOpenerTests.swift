@@ -34,7 +34,7 @@ final class SafariOpenerTests: XCTestCase {
         
         _ = creative?.handleNormalClickthrough(
             clickthroughURL,
-            sdkConfiguration: Prebid.shared,
+            sdkConfiguration: SilverMob.shared,
             onExit: {})
         
         XCTAssert(creative?.clickthroughVisible == true)
@@ -50,7 +50,7 @@ final class SafariOpenerTests: XCTestCase {
         
         _ = creative?.handleNormalClickthrough(
             clickthroughURL,
-            sdkConfiguration: Prebid.shared,
+            sdkConfiguration: SilverMob.shared,
             onExit: {})
         
         creative?.safariOpener?.safariViewControllerDidFinish(creative!.safariOpener!.safariViewController!)
@@ -64,7 +64,7 @@ final class SafariOpenerTests: XCTestCase {
         
         _ = creative?.handleNormalClickthrough(
             clickthroughURL,
-            sdkConfiguration: Prebid.shared,
+            sdkConfiguration: SilverMob.shared,
             onExit: {
                 clickthroughExitExpecation.fulfill()
             })
@@ -87,7 +87,7 @@ final class SafariOpenerTests: XCTestCase {
         
         _ = creative?.handleNormalClickthrough(
             clickthroughURL,
-            sdkConfiguration: Prebid.shared,
+            sdkConfiguration: SilverMob.shared,
             onExit: {})
         
         

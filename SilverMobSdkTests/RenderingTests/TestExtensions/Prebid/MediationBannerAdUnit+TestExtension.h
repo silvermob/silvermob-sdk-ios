@@ -18,7 +18,7 @@
 @interface MediationBannerAdUnit ()
 - (void)fetchDemandWithObject:(NSObject *)adObject
                    connection:(id<PrebidServerConnectionProtocol>)connection
-             sdkConfiguration:(Prebid *)sdkConfiguration
+             sdkConfiguration:(SilverMob *)sdkConfiguration
                     targeting:(Targeting *)targeting
                    completion:(void (^)(ResultCode))completion;
 @end

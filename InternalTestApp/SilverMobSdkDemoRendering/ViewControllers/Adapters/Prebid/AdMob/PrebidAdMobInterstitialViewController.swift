@@ -69,7 +69,7 @@ class PrebidAdMobInterstitialViewController: NSObject, AdaptedController, Prebid
         configIdLabel.text = "Config ID: \(prebidConfigId)"
         
         if let storedAuctionResponse = storedAuctionResponse {
-            Prebid.shared.storedAuctionResponse = storedAuctionResponse
+            SilverMob.shared.storedAuctionResponse = storedAuctionResponse
         }
         
         mediationDelegate = AdMobMediationInterstitialUtils(gadRequest: request)

@@ -20,40 +20,40 @@ class PrebidTest: XCTestCase {
     
     private var logToFile: LogToFileLock?
     
-    private var sdkConfiguration: Prebid!
+    private var sdkConfiguration: SilverMob!
     private let targeting = Targeting.shared
     
     override func setUp() {
         super.setUp()
-        sdkConfiguration = Prebid.mock
+        sdkConfiguration = SilverMob.mock
     }
     
     override func tearDown() {
         logToFile = nil
         sdkConfiguration = nil
         
-        Prebid.reset()
+        SilverMob.reset()
         
         super.tearDown()
     }
     
     func testInitialValues() {
-        let sdkConfiguration = Prebid.shared
+        let sdkConfiguration = SilverMob.shared
         
         checkInitialValue(sdkConfiguration: sdkConfiguration)
     }
     
     func testInitializeSDK_OptionalCallback() {
         // init callback should be optional
-        Prebid.initializeSDK()
+        SilverMob.initializeSDK()
     }
     
     func testInitializeSDK() {
-        try? Prebid.shared.setCustomPrebidServer(url: "https://prebid-server-test-j.prebid.org/openrtb2/auction")
+        try? SilverMob.shared.setCustomPrebidServer(url: "https://prebid-server-test-j.prebid.org/openrtb2/auction")
         
         let expectation = expectation(description: "Expected successful initialization")
         
-        Prebid.initializeSDK { status, error in
+        SilverMob.initializeSDK { status, error in
             if case .succeeded = status {
                 expectation.fulfill()
             }
@@ -67,7 +67,7 @@ class PrebidTest: XCTestCase {
     }
     
     func testLogLevel() {
-        let sdkConfiguration = Prebid.shared
+        let sdkConfiguration = SilverMob.shared
         
         XCTAssertEqual(sdkConfiguration.logLevel, Log.logLevel)
         
@@ -80,7 +80,7 @@ class PrebidTest: XCTestCase {
     
     func testDebugLogFileEnabled() {
         
-        let sdkConfiguration = Prebid.shared
+        let sdkConfiguration = SilverMob.shared
         let initialValue = sdkConfiguration.debugLogFileEnabled
         
         XCTAssertEqual(initialValue, Log.logToFile)
@@ -93,39 +93,39 @@ class PrebidTest: XCTestCase {
     }
     
     func testLocationValues() {
-        let sdkConfiguration = Prebid.shared
+        let sdkConfiguration = SilverMob.shared
         XCTAssertTrue(sdkConfiguration.locationUpdatesEnabled)
         sdkConfiguration.locationUpdatesEnabled = false
         XCTAssertFalse(sdkConfiguration.locationUpdatesEnabled)
     }
     
     func testShared() {
-        let firstConfig = Prebid.shared
-        let newConfig = Prebid.shared
+        let firstConfig = SilverMob.shared
+        let newConfig = SilverMob.shared
         XCTAssertEqual(firstConfig, newConfig)
     }
     
     func testResetShared() {
-        let firstConfig = Prebid.shared
+        let firstConfig = SilverMob.shared
         firstConfig.prebidServerAccountId = "test"
-        Prebid.reset()
+        SilverMob.reset()
         
         checkInitialValue(sdkConfiguration: firstConfig)
     }
     
     func testPrebidHost() {
-        let sdkConfig = Prebid.shared
+        let sdkConfig = SilverMob.shared
         XCTAssertEqual(sdkConfig.prebidServerHost, .Custom)
         
         sdkConfig.prebidServerHost = .Appnexus
         XCTAssertEqual(try! Host.shared.getHostURL(host:sdkConfig.prebidServerHost), "https://ib.adnxs.com/openrtb2/prebid")
         
-        let _ = try! Prebid.shared.setCustomPrebidServer(url: "https://10.0.2.2:8000/openrtb2/auction")
+        let _ = try! SilverMob.shared.setCustomPrebidServer(url: "https://10.0.2.2:8000/openrtb2/auction")
         XCTAssertEqual(sdkConfig.prebidServerHost, .Custom)
     }
     
     func testServerHostCustomInvalid() throws {
-        XCTAssertThrowsError(try Prebid.shared.setCustomPrebidServer(url: "wrong url"))
+        XCTAssertThrowsError(try SilverMob.shared.setCustomPrebidServer(url: "wrong url"))
     }
     
     func testServerHost() {
@@ -134,11 +134,11 @@ class PrebidTest: XCTestCase {
         let case2 = PrebidHost.Rubicon
         
         //when
-        Prebid.shared.prebidServerHost = case1
-        let result1 = Prebid.shared.prebidServerHost
+        SilverMob.shared.prebidServerHost = case1
+        let result1 = SilverMob.shared.prebidServerHost
         
-        Prebid.shared.prebidServerHost = case2
-        let result2 = Prebid.shared.prebidServerHost
+        SilverMob.shared.prebidServerHost = case2
+        let result2 = SilverMob.shared.prebidServerHost
         
         //then
         XCTAssertEqual(case1, result1)
@@ -153,11 +153,11 @@ class PrebidTest: XCTestCase {
         //We can not use setCustomPrebidServer() because it uses UIApplication.shared.canOpenURL
 //        try! Prebid.shared.setCustomPrebidServer(url: customHost)
         
-        Prebid.shared.prebidServerHost = PrebidHost.Custom
+        SilverMob.shared.prebidServerHost = PrebidHost.Custom
         try Host.shared.setCustomHostURL(customHost)
         
         //then
-        XCTAssertEqual(PrebidHost.Custom, Prebid.shared.prebidServerHost)
+        XCTAssertEqual(PrebidHost.Custom, SilverMob.shared.prebidServerHost)
         let getHostURLResult = try Host.shared.getHostURL(host: .Custom)
         XCTAssertEqual(customHost, getHostURLResult)
     }
@@ -167,10 +167,10 @@ class PrebidTest: XCTestCase {
         let serverAccountId = "123"
         
         //when
-        Prebid.shared.prebidServerAccountId = serverAccountId
+        SilverMob.shared.prebidServerAccountId = serverAccountId
         
         //then
-        XCTAssertEqual(serverAccountId, Prebid.shared.prebidServerAccountId)
+        XCTAssertEqual(serverAccountId, SilverMob.shared.prebidServerAccountId)
     }
 
     func testStoredAuctionResponse() {
@@ -178,10 +178,10 @@ class PrebidTest: XCTestCase {
         let storedAuctionResponse = "111122223333"
         
         //when
-        Prebid.shared.storedAuctionResponse = storedAuctionResponse
+        SilverMob.shared.storedAuctionResponse = storedAuctionResponse
         
         //then
-        XCTAssertEqual(storedAuctionResponse, Prebid.shared.storedAuctionResponse)
+        XCTAssertEqual(storedAuctionResponse, SilverMob.shared.storedAuctionResponse)
     }
     
     func testAddStoredBidResponse() {
@@ -194,11 +194,11 @@ class PrebidTest: XCTestCase {
         let rubiconResponseId = "221155"
         
         //when
-        Prebid.shared.addStoredBidResponse(bidder: appnexusBidder, responseId: appnexusResponseId)
-        Prebid.shared.addStoredBidResponse(bidder: rubiconBidder, responseId: rubiconResponseId)
+        SilverMob.shared.addStoredBidResponse(bidder: appnexusBidder, responseId: appnexusResponseId)
+        SilverMob.shared.addStoredBidResponse(bidder: rubiconBidder, responseId: rubiconResponseId)
         
         //then
-        let dict = Prebid.shared.storedBidResponses
+        let dict = SilverMob.shared.storedBidResponses
         XCTAssertEqual(2, dict.count)
         XCTAssert(dict[appnexusBidder] == appnexusResponseId && dict[rubiconBidder] == rubiconResponseId )
     }
@@ -206,12 +206,12 @@ class PrebidTest: XCTestCase {
     func testClearStoredBidResponses() {
         
         //given
-        Prebid.shared.addStoredBidResponse(bidder: "rubicon", responseId: "221155")
-        let case1 = Prebid.shared.storedBidResponses.count
+        SilverMob.shared.addStoredBidResponse(bidder: "rubicon", responseId: "221155")
+        let case1 = SilverMob.shared.storedBidResponses.count
         
         //when
-        Prebid.shared.clearStoredBidResponses()
-        let case2 = Prebid.shared.storedBidResponses.count
+        SilverMob.shared.clearStoredBidResponses()
+        let case2 = SilverMob.shared.storedBidResponses.count
         
         //then
         XCTAssertNotEqual(0, case1)
@@ -228,11 +228,11 @@ class PrebidTest: XCTestCase {
         let bundleName = "com.app.nextAd"
 
         //when
-        Prebid.shared.addCustomHeader(name: sdkVersionHeader, value: sdkVersion)
-        Prebid.shared.addCustomHeader(name: bundleHeader, value: bundleName)
+        SilverMob.shared.addCustomHeader(name: sdkVersionHeader, value: sdkVersion)
+        SilverMob.shared.addCustomHeader(name: bundleHeader, value: bundleName)
 
         //then
-        let dict = Prebid.shared.customHeaders
+        let dict = SilverMob.shared.customHeaders
         XCTAssertEqual(2, dict.count)
         XCTAssert(dict[sdkVersionHeader] == sdkVersion && dict[bundleHeader] == bundleName )
     }
@@ -240,12 +240,12 @@ class PrebidTest: XCTestCase {
     func testClearCustomHeaders() {
 
         //given
-        Prebid.shared.addCustomHeader(name: "header", value: "value")
-        let case1 = Prebid.shared.customHeaders.count
+        SilverMob.shared.addCustomHeader(name: "header", value: "value")
+        let case1 = SilverMob.shared.customHeaders.count
 
         //when
-        Prebid.shared.clearCustomHeaders()
-        let case2 = Prebid.shared.customHeaders.count
+        SilverMob.shared.clearCustomHeaders()
+        let case2 = SilverMob.shared.customHeaders.count
 
         //then
         XCTAssertNotEqual(0, case1)
@@ -258,11 +258,11 @@ class PrebidTest: XCTestCase {
         let case2 = false
         
         //when
-        Prebid.shared.shareGeoLocation = case1
-        let result1 = Prebid.shared.shareGeoLocation
+        SilverMob.shared.shareGeoLocation = case1
+        let result1 = SilverMob.shared.shareGeoLocation
         
-        Prebid.shared.shareGeoLocation = case2
-        let result2 = Prebid.shared.shareGeoLocation
+        SilverMob.shared.shareGeoLocation = case2
+        let result2 = SilverMob.shared.shareGeoLocation
         
         //rhen
         XCTAssertEqual(case1, result1)
@@ -274,15 +274,15 @@ class PrebidTest: XCTestCase {
         let timeoutMillis =  3_000
         
         //when
-        Prebid.shared.timeoutMillis = timeoutMillis
+        SilverMob.shared.timeoutMillis = timeoutMillis
         
         //then
-        XCTAssertEqual(timeoutMillis, Prebid.shared.timeoutMillis)
+        XCTAssertEqual(timeoutMillis, SilverMob.shared.timeoutMillis)
     }
     
     func testBidderName() {
-        XCTAssertEqual("appnexus", Prebid.bidderNameAppNexus)
-        XCTAssertEqual("rubicon", Prebid.bidderNameRubiconProject)
+        XCTAssertEqual("appnexus", SilverMob.bidderNameAppNexus)
+        XCTAssertEqual("rubicon", SilverMob.bidderNameRubiconProject)
     }
     
     func testPbsDebug() {
@@ -290,15 +290,15 @@ class PrebidTest: XCTestCase {
         let pbsDebug = true
         
         //when
-        Prebid.shared.pbsDebug = pbsDebug
+        SilverMob.shared.pbsDebug = pbsDebug
         
         //then
-        XCTAssertEqual(pbsDebug, Prebid.shared.pbsDebug)
+        XCTAssertEqual(pbsDebug, SilverMob.shared.pbsDebug)
     }
     
     func testPBSCreativeFactoryTimeout() {
-        try! sdkConfiguration.setCustomPrebidServer(url: Prebid.devintServerURL)
-        sdkConfiguration.prebidServerAccountId = Prebid.devintAccountID
+        try! sdkConfiguration.setCustomPrebidServer(url: SilverMob.devintServerURL)
+        sdkConfiguration.prebidServerAccountId = SilverMob.devintAccountID
         
         let creativeFactoryTimeout = 11.1
         let creativeFactoryTimeoutPreRenderContent = 22.2
@@ -325,13 +325,13 @@ class PrebidTest: XCTestCase {
         }
         waitForExpectations(timeout: 5)
         
-        XCTAssertEqual(Prebid.shared.creativeFactoryTimeout, creativeFactoryTimeout)
-        XCTAssertEqual(Prebid.shared.creativeFactoryTimeoutPreRenderContent, creativeFactoryTimeoutPreRenderContent)
+        XCTAssertEqual(SilverMob.shared.creativeFactoryTimeout, creativeFactoryTimeout)
+        XCTAssertEqual(SilverMob.shared.creativeFactoryTimeoutPreRenderContent, creativeFactoryTimeoutPreRenderContent)
     }
     
     // MARK: - Private Methods
     
-    private func checkInitialValue(sdkConfiguration: Prebid, file: StaticString = #file, line: UInt = #line) {
+    private func checkInitialValue(sdkConfiguration: SilverMob, file: StaticString = #file, line: UInt = #line) {
         // PBMSDKConfiguration
         
         XCTAssertEqual(sdkConfiguration.creativeFactoryTimeout, 6.0)

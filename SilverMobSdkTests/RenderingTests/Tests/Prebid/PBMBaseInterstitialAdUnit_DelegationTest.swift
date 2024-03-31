@@ -32,7 +32,7 @@ class MockRewardedAdUnit: RewardedAdUnit {
 
 class PBMBaseInterstitialAdUnit_DelegationTest: XCTestCase {
     override func tearDown() {
-        Prebid.reset()
+        SilverMob.reset()
         
         super.tearDown()
     }
@@ -70,7 +70,7 @@ class PBMBaseInterstitialAdUnit_DelegationTest: XCTestCase {
     func testAccountErrorPropagationByInterstitial() {
         let testID = "auid"
         
-        Prebid.shared.prebidServerAccountId = ""
+        SilverMob.shared.prebidServerAccountId = ""
         
         let interstitial = MockInterstitialAdUnit(configID: testID)
         let exp = expectation(description: "loading callback called")
@@ -92,7 +92,7 @@ class PBMBaseInterstitialAdUnit_DelegationTest: XCTestCase {
     func testAccountErrorPropagationByRewardedAd() {
         let testID = "auid"
         
-        Prebid.shared.prebidServerAccountId = ""
+        SilverMob.shared.prebidServerAccountId = ""
         
         let rewarded = MockRewardedAdUnit(configID: testID, minSizePerc: nil, eventHandler: RewardedEventHandlerStandalone())
         let exp = expectation(description: "loading callback called")

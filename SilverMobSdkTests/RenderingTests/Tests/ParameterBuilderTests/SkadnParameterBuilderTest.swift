@@ -24,7 +24,7 @@ class SkadnParameterBuilderTest: XCTestCase {
         let adConfiguration = AdConfiguration()
         let mockTargeting = Targeting()
         
-        let basicBuilder = PBMBasicParameterBuilder(adConfiguration: adConfiguration, sdkConfiguration: Prebid.shared, sdkVersion: "mock-version", targeting: mockTargeting)
+        let basicBuilder = PBMBasicParameterBuilder(adConfiguration: adConfiguration, sdkConfiguration: SilverMob.shared, sdkVersion: "mock-version", targeting: mockTargeting)
         let skadnBuilder = PBMSKAdNetworksParameterBuilder(bundle: Bundle.main, targeting: mockTargeting, adConfiguration: adConfiguration)
         
         let bidRequest = PBMORTBBidRequest()
@@ -44,7 +44,7 @@ class SkadnParameterBuilderTest: XCTestCase {
         
         mockTargeting.sourceapp = sourceappMock
         
-        let basicBuilder = PBMBasicParameterBuilder(adConfiguration: adConfiguration, sdkConfiguration: Prebid.shared, sdkVersion: "mock-version", targeting: mockTargeting)
+        let basicBuilder = PBMBasicParameterBuilder(adConfiguration: adConfiguration, sdkConfiguration: SilverMob.shared, sdkVersion: "mock-version", targeting: mockTargeting)
         let skadnBuilder = MockSKAdNetworksParameterBuilder(bundle: Bundle.main, targeting: mockTargeting, adConfiguration: adConfiguration)
         
         let bidRequest = PBMORTBBidRequest()

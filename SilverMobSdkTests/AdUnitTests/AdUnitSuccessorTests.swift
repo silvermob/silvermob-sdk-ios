@@ -23,7 +23,7 @@ class AdUnitSuccessorTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
         
-        Prebid.shared.useExternalClickthroughBrowser = false
+        SilverMob.shared.useExternalClickthroughBrowser = false
     }
     
     //MARK: - BannerAdUnit

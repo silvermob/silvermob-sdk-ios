@@ -21,7 +21,7 @@ class PrebidServerStatusRequesterTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
         
-        Prebid.reset()
+        SilverMob.reset()
     }
     
     func testURLValidation() {
@@ -38,7 +38,7 @@ class PrebidServerStatusRequesterTests: XCTestCase {
     
     func testStatusEndpoint_Default() {
         let testHost = "https://unique-prebid-server-host.org"
-        try? Prebid.shared.setCustomPrebidServer(url: "\(testHost)/openrtb2/auction")
+        try? SilverMob.shared.setCustomPrebidServer(url: "\(testHost)/openrtb2/auction")
         let requester = PrebidServerStatusRequester()
         
         let expectedStatusEndpoint = "\(testHost)/status/"
@@ -74,7 +74,7 @@ class PrebidServerStatusRequesterTests: XCTestCase {
     }
     
     func testRequestStatus_Success() {
-        try? Prebid.shared.setCustomPrebidServer(url: "https://prebid-server-test-j.prebid.org/openrtb2/auction")
+        try? SilverMob.shared.setCustomPrebidServer(url: "https://prebid-server-test-j.prebid.org/openrtb2/auction")
         
         let expectation = expectation(description: "Expected successful status response.")
         

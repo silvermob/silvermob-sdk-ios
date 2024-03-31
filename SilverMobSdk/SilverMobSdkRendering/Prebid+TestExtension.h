@@ -25,7 +25,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Prebid (Test)
+@interface SilverMob (Test)
 
 @property(nonatomic, assign) BOOL forcedIsViewable;
 

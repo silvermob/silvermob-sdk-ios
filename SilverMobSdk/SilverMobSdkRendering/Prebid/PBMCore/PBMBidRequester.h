@@ -17,7 +17,7 @@
 #import "PBMBidRequesterProtocol.h"
 
 @class AdUnitConfig;
-@class Prebid;
+@class SilverMob;
 @class Targeting;
 @protocol PrebidServerConnectionProtocol;
 
@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PBMBidRequester : NSObject <PBMBidRequesterProtocol>
 
 - (instancetype)initWithConnection:(id<PrebidServerConnectionProtocol>)connection
-                  sdkConfiguration:(Prebid *)sdkConfiguration
+                  sdkConfiguration:(SilverMob *)sdkConfiguration
                          targeting:(Targeting *)targeting
                adUnitConfiguration:(AdUnitConfig *)adUnitConfiguration;
 

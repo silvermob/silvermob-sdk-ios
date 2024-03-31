@@ -67,7 +67,7 @@ class PrebidGAMInterstitialController: NSObject, AdaptedController, PrebidConfig
         let eventHandler = GAMInterstitialEventHandler(adUnitID: gamAdUnitId)
         
         if let storedAuctionResponse = storedAuctionResponse {
-            Prebid.shared.storedAuctionResponse = storedAuctionResponse
+            SilverMob.shared.storedAuctionResponse = storedAuctionResponse
         }
         
         interstitialController = InterstitialRenderingAdUnit(configID: prebidConfigId,

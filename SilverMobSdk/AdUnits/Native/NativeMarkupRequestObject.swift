@@ -141,7 +141,7 @@ public class NativeMarkupRequestObject: NSObject, NSCopying, PBMJsonCodable {
         var assetsObjects: [[AnyHashable : Any]] = []
         if let assets = assets {
             for asset in assets {
-                if Prebid.shared.shouldAssignNativeAssetID {
+                if SilverMob.shared.shouldAssignNativeAssetID {
                     idCount += 1
                 }
                 assetsObjects.append(asset.getAssetObject(id: idCount))

@@ -67,7 +67,7 @@ class PrebidInterstitialController: NSObject, AdaptedController, PrebidConfigura
         configIdLabel.text = "Config ID: \(prebidConfigId)"
         
         if let storedAuctionResponse = storedAuctionResponse {
-            Prebid.shared.storedAuctionResponse = storedAuctionResponse
+            SilverMob.shared.storedAuctionResponse = storedAuctionResponse
         }
 
         interstitialController = InterstitialRenderingAdUnit(configID: prebidConfigId,

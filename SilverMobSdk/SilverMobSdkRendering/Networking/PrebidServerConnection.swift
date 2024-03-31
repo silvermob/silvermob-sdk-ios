@@ -247,7 +247,7 @@ public class PrebidServerConnection: NSObject, PrebidServerConnectionProtocol, U
         }
         
         // Prebid custom headers
-        for (key, value) in Prebid.shared.customHeaders {
+        for (key, value) in SilverMob.shared.customHeaders {
             request.addValue(value, forHTTPHeaderField: key)
         }
         

@@ -84,7 +84,7 @@ public class Bid: NSObject {
         
         var winningBidMarkers = ["hb_pb", "hb_bidder"]
         
-        if Prebid.shared.useCacheForReportingWithRenderingAPI {
+        if SilverMob.shared.useCacheForReportingWithRenderingAPI {
             winningBidMarkers.append("hb_cache_id")
         }
 

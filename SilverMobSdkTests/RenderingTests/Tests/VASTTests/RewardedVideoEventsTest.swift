@@ -47,15 +47,15 @@ class RewardedVideoEventsTest : XCTestCase, PBMCreativeViewDelegate {
     override func tearDown() {
         MockServer.shared.reset()
         
-        Prebid.reset()
+        SilverMob.reset()
         
         super.tearDown()
     }
     
     func testEvents() {
         self.initExpectations()
-        Prebid.forcedIsViewable = true
-        defer { Prebid.reset() }
+        SilverMob.forcedIsViewable = true
+        defer { SilverMob.reset() }
         
         
         let connection = UtilitiesForTesting.createConnectionForMockedTest()

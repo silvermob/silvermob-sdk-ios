@@ -24,7 +24,7 @@
 - (void)setupViewWithThread:(nonnull id<PBMNSThreadProtocol>)thread;
 
 - (BOOL)handleNormalClickthrough:(NSURL *_Nonnull)url
-                sdkConfiguration:(Prebid *_Nonnull)sdkConfiguration
+                sdkConfiguration:(SilverMob *_Nonnull)sdkConfiguration
                           onExit:(nonnull PBMVoidBlock)onClickthroughExitBlock;
 
 @end

@@ -30,7 +30,7 @@
 @class PBMAdConfiguration;
 @class PBMDeviceAccessManager;
 @class PBMLocationManager;
-@class Prebid;
+@class SilverMob;
 
 @interface PBMParameterBuilderService : NSObject
 
@@ -47,7 +47,7 @@
                                                               pbmDeviceAccessManager:(nonnull PBMDeviceAccessManager *)pbmDeviceAccessManager
                                                               ctTelephonyNetworkInfo:(nonnull CTTelephonyNetworkInfo *)ctTelephonyNetworkInfo
                                                                         reachability:(nonnull PBMReachability *)reachability
-                                                                    sdkConfiguration:(nonnull Prebid *)sdkConfiguration
+                                                                    sdkConfiguration:(nonnull SilverMob *)sdkConfiguration
                                                                           sdkVersion:(nonnull NSString *)sdkVersion
                                                                            targeting:(nonnull Targeting *)targeting
                                                               extraParameterBuilders:(nullable NSArray<id<PBMParameterBuilder> > *)extraParameterBuilders;

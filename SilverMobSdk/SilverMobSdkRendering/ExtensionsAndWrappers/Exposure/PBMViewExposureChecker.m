@@ -55,7 +55,7 @@
     [self.obstructions removeAllObjects];
         
 #   ifdef DEBUG
-    if (Prebid.shared.forcedIsViewable) {
+    if (SilverMob.shared.forcedIsViewable) {
         return [[PBMViewExposure alloc] initWithExposureFactor:1 visibleRectangle:self.testedView.bounds occlusionRectangles:nil];
     }
 #   endif

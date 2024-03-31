@@ -35,7 +35,7 @@ class ServerConnectionTest : XCTestCase {
         MockServer.shared.reset()
         self.didTalkToServerExpectation = nil
         self.responseHandledExpectation = nil
-        Prebid.shared.clearCustomHeaders()
+        SilverMob.shared.clearCustomHeaders()
     }
     
     func testSharedCreation() {
@@ -302,8 +302,8 @@ class ServerConnectionTest : XCTestCase {
         let headerField = "X-JamboJambo"
         let headerValue = "value-of-the-header-field"
         
-        Prebid.shared.clearCustomHeaders()
-        Prebid.shared.addCustomHeader(name: headerField, value: headerValue)
+        SilverMob.shared.clearCustomHeaders()
+        SilverMob.shared.addCustomHeader(name: headerField, value: headerValue)
         
         self.didTalkToServerExpectation = self.expectation(description: "didTalkToServerExpectation")
         self.responseHandledExpectation = self.expectation(description: "responseHandledExpectation")
@@ -326,7 +326,7 @@ class ServerConnectionTest : XCTestCase {
                 PrebidServerConnection.internalIDKey       : connection.internalID.uuidString
             ]
             
-            expectedRequestHeaders.merge(dict: Prebid.shared.customHeaders)
+            expectedRequestHeaders.merge(dict: SilverMob.shared.customHeaders)
             
             let actualRequestHeaders = urlRequest.allHTTPHeaderFields!
             XCTAssertEqual(expectedRequestHeaders, actualRequestHeaders, "expected \(expectedRequestHeaders), got \(actualRequestHeaders)")
@@ -607,7 +607,7 @@ class ServerConnectionTest_Redirect: XCTestCase {
     // Ref: http://www.ietf.org/rfc/rfc2616.txt
     
     override func tearDown() {
-        Prebid.shared.clearCustomHeaders()
+        SilverMob.shared.clearCustomHeaders()
     }
     
     func testServerResponse_GetReturns302() {

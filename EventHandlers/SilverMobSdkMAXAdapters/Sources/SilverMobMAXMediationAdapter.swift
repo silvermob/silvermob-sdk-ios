@@ -49,7 +49,7 @@ public class SilverMobMAXMediationAdapter: ALMediationAdapter {
     }
     
     public override var sdkVersion: String {
-        return Prebid.shared.version
+        return SilverMob.shared.version
     }
     
     public override var adapterVersion: String {

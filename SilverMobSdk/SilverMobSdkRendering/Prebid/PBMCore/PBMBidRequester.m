@@ -33,7 +33,7 @@
 @interface PBMBidRequester ()
 
 @property (nonatomic, strong, nonnull, readonly) id<PrebidServerConnectionProtocol> connection;
-@property (nonatomic, strong, nonnull, readonly) Prebid *sdkConfiguration;
+@property (nonatomic, strong, nonnull, readonly) SilverMob *sdkConfiguration;
 @property (nonatomic, strong, nonnull, readonly) Targeting *targeting;
 @property (nonatomic, strong, nonnull, readonly) AdUnitConfig *adUnitConfiguration;
 
@@ -44,7 +44,7 @@
 @implementation PBMBidRequester
 
 - (instancetype)initWithConnection:(id<PrebidServerConnectionProtocol>)connection
-                  sdkConfiguration:(Prebid *)sdkConfiguration
+                  sdkConfiguration:(SilverMob *)sdkConfiguration
                          targeting:(Targeting *)targeting
                adUnitConfiguration:(AdUnitConfig *)adUnitConfiguration {
     if (!(self = [super init])) {
@@ -141,11 +141,11 @@
             
             if(pbsSDKConfig) {
                 if(pbsSDKConfig.cftBanner) {
-                    Prebid.shared.creativeFactoryTimeout = pbsSDKConfig.cftBanner.doubleValue;
+                    SilverMob.shared.creativeFactoryTimeout = pbsSDKConfig.cftBanner.doubleValue;
                 }
                 
                 if(pbsSDKConfig.cftPreRender) {
-                    Prebid.shared.creativeFactoryTimeoutPreRenderContent = pbsSDKConfig.cftPreRender.doubleValue;
+                    SilverMob.shared.creativeFactoryTimeoutPreRenderContent = pbsSDKConfig.cftPreRender.doubleValue;
                 }
             }
         }

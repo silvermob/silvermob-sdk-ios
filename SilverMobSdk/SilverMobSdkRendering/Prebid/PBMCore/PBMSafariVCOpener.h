@@ -22,7 +22,7 @@
 #import "PBMModalState.h"
 #import "PBMOpenMeasurementSession.h"
 
-@class Prebid;
+@class SilverMob;
 @class PBMAdConfiguration;
 
 typedef PBMOpenMeasurementSession * _Nullable (^PBMOpenMeasurementSessionProvider)(void);
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PBMSafariVCOpener : NSObject <SFSafariViewControllerDelegate>
 
-- (instancetype)initWithSDKConfiguration:(Prebid *)sdkConfiguration
+- (instancetype)initWithSDKConfiguration:(SilverMob *)sdkConfiguration
                             modalManager:(PBMModalManager *)modalManager
                   viewControllerProvider:(PBMViewControllerProvider)viewControllerProvider
               measurementSessionProvider:(PBMOpenMeasurementSessionProvider)measurementSessionProvider

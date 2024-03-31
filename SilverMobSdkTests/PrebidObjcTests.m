@@ -28,10 +28,10 @@ limitations under the License.
     PrebidHost case2 = PrebidHostRubicon;
     
     //when
-    Prebid.shared.prebidServerHost = case1;
-    PrebidHost result1 = Prebid.shared.prebidServerHost;
-    Prebid.shared.prebidServerHost = case2;
-    PrebidHost result2 = Prebid.shared.prebidServerHost;
+    SilverMob.shared.prebidServerHost = case1;
+    PrebidHost result1 = SilverMob.shared.prebidServerHost;
+    SilverMob.shared.prebidServerHost = case2;
+    PrebidHost result2 = SilverMob.shared.prebidServerHost;
     
     //then
     XCTAssertEqual(case1, result1);
@@ -43,7 +43,7 @@ limitations under the License.
     NSError *error = nil;
     
     //when
-    [Prebid.shared setCustomPrebidServerWithUrl:@"wrong url" error:&error];
+    [SilverMob.shared setCustomPrebidServerWithUrl:@"wrong url" error:&error];
     
     //then
     XCTAssertNotNil(error);
@@ -54,10 +54,10 @@ limitations under the License.
     NSString *serverAccountId = @"123";
     
     //when
-    Prebid.shared.prebidServerAccountId = serverAccountId;
+    SilverMob.shared.prebidServerAccountId = serverAccountId;
     
     //then
-    XCTAssertEqualObjects(serverAccountId, Prebid.shared.prebidServerAccountId);
+    XCTAssertEqualObjects(serverAccountId, SilverMob.shared.prebidServerAccountId);
 }
 
 - (void)testStoredAuctionResponse {
@@ -65,18 +65,18 @@ limitations under the License.
     NSString *storedAuctionResponse = @"111122223333";
     
     //when
-    Prebid.shared.storedAuctionResponse = storedAuctionResponse;
+    SilverMob.shared.storedAuctionResponse = storedAuctionResponse;
     
     //then
-    XCTAssertEqualObjects(storedAuctionResponse, Prebid.shared.storedAuctionResponse);
+    XCTAssertEqualObjects(storedAuctionResponse, SilverMob.shared.storedAuctionResponse);
 }
 
 - (void)testAddStoredBidResponse {
-    [Prebid.shared addStoredBidResponseWithBidder:@"rubicon" responseId:@"221155"];
+    [SilverMob.shared addStoredBidResponseWithBidder:@"rubicon" responseId:@"221155"];
 }
 
 - (void)testClearStoredBidResponses {
-    [Prebid.shared clearStoredBidResponses];
+    [SilverMob.shared clearStoredBidResponses];
 }
 
 - (void)testShareGeoLocation {
@@ -85,11 +85,11 @@ limitations under the License.
     BOOL case2 = NO;
     
     //when
-    Prebid.shared.shareGeoLocation = case1;
-    BOOL result1 = Prebid.shared.shareGeoLocation;
+    SilverMob.shared.shareGeoLocation = case1;
+    BOOL result1 = SilverMob.shared.shareGeoLocation;
     
-    Prebid.shared.shareGeoLocation = case2;
-    BOOL result2 = Prebid.shared.shareGeoLocation;
+    SilverMob.shared.shareGeoLocation = case2;
+    BOOL result2 = SilverMob.shared.shareGeoLocation;
     
     //rhen
     XCTAssertEqual(case1, result1);
@@ -101,19 +101,19 @@ limitations under the License.
     int timeoutMillis =  3000;
     
     //when
-    Prebid.shared.timeoutMillis = timeoutMillis;
+    SilverMob.shared.timeoutMillis = timeoutMillis;
     
     //then
-    XCTAssertEqual(timeoutMillis, Prebid.shared.timeoutMillis);
+    XCTAssertEqual(timeoutMillis, SilverMob.shared.timeoutMillis);
 }
 
 - (void)testLogLevel {
-    [Prebid.shared setLogLevel:PBMLogLevel.debug];
+    [SilverMob.shared setLogLevel:PBMLogLevel.debug];
 }
 
 - (void)testBidderName {
-    XCTAssertEqualObjects(@"appnexus", Prebid.bidderNameAppNexus);
-    XCTAssertEqualObjects(@"rubicon", Prebid.bidderNameRubiconProject);
+    XCTAssertEqualObjects(@"appnexus", SilverMob.bidderNameAppNexus);
+    XCTAssertEqualObjects(@"rubicon", SilverMob.bidderNameRubiconProject);
 }
 
 - (void)testPbsDebug {
@@ -121,10 +121,10 @@ limitations under the License.
     BOOL pbsDebug = true;
     
     //when
-    Prebid.shared.pbsDebug = pbsDebug;
+    SilverMob.shared.pbsDebug = pbsDebug;
     
     //then
-    XCTAssertEqual(pbsDebug, Prebid.shared.pbsDebug);
+    XCTAssertEqual(pbsDebug, SilverMob.shared.pbsDebug);
 }
 
 @end

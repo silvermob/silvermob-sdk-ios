@@ -19,8 +19,8 @@ import SilverMobSdk
 
 final class SilverMobSdkXSDKConfigurationController : FormViewController {
     
-    var sdkConfig: Prebid {
-        return Prebid.shared
+    var sdkConfig: SilverMob {
+        return SilverMob.shared
     }
     
     override func viewDidLoad() {

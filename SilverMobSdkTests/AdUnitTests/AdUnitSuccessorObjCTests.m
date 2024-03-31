@@ -26,7 +26,7 @@ NSString * const configId = @"1001-1";
 
 
 - (void)tearDown {
-    Prebid.shared.useExternalClickthroughBrowser = false;
+    SilverMob.shared.useExternalClickthroughBrowser = false;
 }
 
 //MARK: - BannerAdUnit

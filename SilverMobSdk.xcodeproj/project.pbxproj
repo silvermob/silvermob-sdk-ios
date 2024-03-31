@@ -406,7 +406,7 @@
 		5BC37A18271F1D0000444D5E /* PBMViewControllerProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC377CC271F1CFF00444D5E /* PBMViewControllerProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BC37A19271F1D0000444D5E /* PBMBidRequesterFactoryBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC377CD271F1CFF00444D5E /* PBMBidRequesterFactoryBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BC37A1A271F1D0000444D5E /* PBMRawBidResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC377CE271F1CFF00444D5E /* PBMRawBidResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5BC37A1B271F1D0000444D5E /* Prebid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC377CF271F1CFF00444D5E /* Prebid.swift */; };
+		5BC37A1B271F1D0000444D5E /* SilverMob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC377CF271F1CFF00444D5E /* SilverMob.swift */; };
 		5BC37A1C271F1D0000444D5E /* PBMErrorFamily.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC377D0271F1CFF00444D5E /* PBMErrorFamily.m */; };
 		5BC37A1D271F1D0000444D5E /* PBMWinNotifier+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC377D1271F1CFF00444D5E /* PBMWinNotifier+Private.h */; };
 		5BC37A1E271F1D0000444D5E /* ResultCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC377D2271F1CFF00444D5E /* ResultCode.swift */; };
@@ -1257,7 +1257,7 @@
 		5BC377CC271F1CFF00444D5E /* PBMViewControllerProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMViewControllerProvider.h; sourceTree = "<group>"; };
 		5BC377CD271F1CFF00444D5E /* PBMBidRequesterFactoryBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMBidRequesterFactoryBlock.h; sourceTree = "<group>"; };
 		5BC377CE271F1CFF00444D5E /* PBMRawBidResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMRawBidResponse.h; sourceTree = "<group>"; };
-		5BC377CF271F1CFF00444D5E /* Prebid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prebid.swift; sourceTree = "<group>"; };
+		5BC377CF271F1CFF00444D5E /* SilverMob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SilverMob.swift; sourceTree = "<group>"; };
 		5BC377D0271F1CFF00444D5E /* PBMErrorFamily.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMErrorFamily.m; sourceTree = "<group>"; };
 		5BC377D1271F1CFF00444D5E /* PBMWinNotifier+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PBMWinNotifier+Private.h"; sourceTree = "<group>"; };
 		5BC377D2271F1CFF00444D5E /* ResultCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCode.swift; sourceTree = "<group>"; };
@@ -1925,7 +1925,7 @@
 				53C925042990FBFB009E6F94 /* PrebidServerStatusRequester.swift */,
 				5BC37649271F1CFD00444D5E /* Gender.swift */,
 				5BC3764A271F1CFD00444D5E /* Targeting.swift */,
-				5BC377CF271F1CFF00444D5E /* Prebid.swift */,
+				5BC377CF271F1CFF00444D5E /* SilverMob.swift */,
 				53D934FE282CE62E0092E243 /* AgeUtils.swift */,
 				537B6580283524BB008AE9D1 /* PrebidInitializationStatus.swift */,
 				53F35F6C292B9F2F001C1183 /* UserConsentDataManager.swift */,
@@ -4105,7 +4105,7 @@
 				5BC3796E271F1D0000444D5E /* PBMVastWrapperAd.m in Sources */,
 				537B6518283372FD008AE9D1 /* PathBuilder.swift in Sources */,
 				FAEE4D1A262DC2B200AD9966 /* NativeAd.swift in Sources */,
-				5BC37A1B271F1D0000444D5E /* Prebid.swift in Sources */,
+				5BC37A1B271F1D0000444D5E /* SilverMob.swift in Sources */,
 				5BC379A8271F1D0000444D5E /* PBMModalViewController.m in Sources */,
 				5BC37AC3271F1D0100444D5E /* PBMURLComponents.m in Sources */,
 				5BC378D3271F1CFF00444D5E /* PBMORTBAbstract.m in Sources */,
@@ -4468,7 +4468,7 @@
 				);
 				INFOPLIST_FILE = SilverMobSdk/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4504,7 +4504,7 @@
 				);
 				INFOPLIST_FILE = SilverMobSdk/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

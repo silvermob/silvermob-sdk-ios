@@ -18,11 +18,11 @@ import XCTest
 @testable import SilverMobSdk
 
 class MediationInterstitialAdUnitTest: XCTestCase {
-    private let sdkConfiguration: Prebid = {
-        let config = Prebid.mock
+    private let sdkConfiguration: SilverMob = {
+        let config = SilverMob.mock
         //        config.serverURL = Prebid.devintServerURL
-        try! config.setCustomPrebidServer(url: Prebid.devintServerURL)
-        config.prebidServerAccountId = Prebid.devintAccountID
+        try! config.setCustomPrebidServer(url: SilverMob.devintServerURL)
+        config.prebidServerAccountId = SilverMob.devintAccountID
         return config
     }()
     private let targeting = Targeting.shared

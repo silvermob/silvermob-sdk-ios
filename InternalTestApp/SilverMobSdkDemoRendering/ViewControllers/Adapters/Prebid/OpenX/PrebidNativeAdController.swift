@@ -45,7 +45,7 @@ class PrebidNativeAdController: NSObject, AdaptedController {
     }
     
     deinit {
-        Prebid.shared.shouldAssignNativeAssetID = false
+        SilverMob.shared.shouldAssignNativeAssetID = false
     }
     
     func setupNativeAdView(_ nativeAdViewBox: NativeAdViewBoxProtocol) {

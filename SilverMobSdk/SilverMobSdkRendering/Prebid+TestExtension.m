@@ -17,7 +17,7 @@
 
 #import "Prebid+TestExtension.h"
 
-@implementation Prebid (Test)
+@implementation SilverMob (Test)
 
 @dynamic forcedIsViewable;
 

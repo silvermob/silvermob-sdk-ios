@@ -15,7 +15,7 @@
 
 #import "PBMBidRequesterFactoryBlock.h"
 
-@class Prebid;
+@class SilverMob;
 @class Targeting;
 @protocol PrebidServerConnectionProtocol;
 
@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, class, readonly) PBMBidRequesterFactoryBlock requesterFactoryWithSingletons;
 
 + (PBMBidRequesterFactoryBlock)requesterFactoryWithConnection:(id<PrebidServerConnectionProtocol>)connection
-                                             sdkConfiguration:(Prebid *)sdkConfiguration
+                                             sdkConfiguration:(SilverMob *)sdkConfiguration
                                                     targeting:(Targeting *)targeting;
 
 - (instancetype)init NS_UNAVAILABLE;

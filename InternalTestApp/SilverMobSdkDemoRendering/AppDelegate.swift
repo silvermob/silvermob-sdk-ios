@@ -42,10 +42,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             consentHelper.parseAndApply(consentSettingsString: params[0])
         }
         
-        try? Prebid.shared.setCustomPrebidServer(url: "https://prebid-server-test-j.prebid.org/openrtb2/auction")
+        try? SilverMob.shared.setCustomPrebidServer(url: "https://prebid-server-test-j.prebid.org/openrtb2/auction")
         
         //Set up SDK.
-        Prebid.initializeSDK { status, error in
+        SilverMob.initializeSDK { status, error in
             switch status {
             case .succeeded:
                 print("Prebid successfully initialized")
@@ -148,16 +148,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Prebid Rendering Configs
-        Prebid.shared.logLevel = .info
-        Prebid.shared.debugLogFileEnabled = true
+        SilverMob.shared.logLevel = .info
+        SilverMob.shared.debugLogFileEnabled = true
         
         // Ads may include Open Measurement scripts that sometime require additional time for loading.
-        Prebid.shared.creativeFactoryTimeout = 20;
+        SilverMob.shared.creativeFactoryTimeout = 20;
         
-        Prebid.shared.locationUpdatesEnabled = false
+        SilverMob.shared.locationUpdatesEnabled = false
         
         // Original Prebid Configs
-        Prebid.shared.shareGeoLocation = true
+        SilverMob.shared.shareGeoLocation = true
         
 		return true
 	}

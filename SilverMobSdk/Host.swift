@@ -33,7 +33,7 @@ import UIKit
         switch self {
         case .Appnexus: return "https://ib.adnxs.com/openrtb2/prebid"
         case .Rubicon: return "https://prebid-server.rubiconproject.com/openrtb2/auction"
-        case .Custom: return ""
+        case .Custom: return "https://g-pb.silvermob.com/openrtb2/auction"
         }
     }
 }

@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithCreativeModel:(PBMCreativeModel *)creativeModel
                           transaction:(PBMTransaction *)transaction
                               webView:(nullable PBMWebView *)webView
-                     sdkConfiguration:(Prebid *)sdkConfiguration;
+                     sdkConfiguration:(SilverMob *)sdkConfiguration;
 
 - (nonnull id<PBMUIApplicationProtocol>)getApplication;
 

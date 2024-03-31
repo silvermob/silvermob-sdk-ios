@@ -18,7 +18,7 @@
 #import "PBMBundleProtocol.h"
 #import "PBMParameterBuilderProtocol.h"
 
-@class Prebid;
+@class SilverMob;
 @class Targeting;
 
 NS_ASSUME_NONNULL_BEGIN

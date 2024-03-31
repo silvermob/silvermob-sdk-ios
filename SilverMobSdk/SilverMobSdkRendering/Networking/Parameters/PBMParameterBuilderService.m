@@ -51,7 +51,7 @@
                              pbmDeviceAccessManager:[[PBMDeviceAccessManager alloc] initWithRootViewController: nil]
                              ctTelephonyNetworkInfo:[CTTelephonyNetworkInfo new]
                                        reachability:PBMReachability.shared
-                                   sdkConfiguration:Prebid.shared
+                                   sdkConfiguration:SilverMob.shared
                                          sdkVersion:[PBMFunctions sdkVersion]
                                           targeting:Targeting.shared
                              extraParameterBuilders:extraParameterBuilders];
@@ -65,7 +65,7 @@
                                                               pbmDeviceAccessManager:(nonnull PBMDeviceAccessManager *)pbmDeviceAccessManager
                                                               ctTelephonyNetworkInfo:(nonnull CTTelephonyNetworkInfo *)ctTelephonyNetworkInfo
                                                                         reachability:(nonnull PBMReachability *)reachability
-                                                                    sdkConfiguration:(nonnull Prebid *)sdkConfiguration
+                                                                    sdkConfiguration:(nonnull SilverMob *)sdkConfiguration
                                                                           sdkVersion:(nonnull NSString *)sdkVersion
                                                                            targeting:(nonnull Targeting *)targeting
                                                               extraParameterBuilders:(nullable NSArray<id<PBMParameterBuilder> > *)extraParameterBuilders{

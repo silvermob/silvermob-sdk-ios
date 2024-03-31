@@ -19,17 +19,17 @@ import XCTest
 
 class PBMCreativeFactoryJobTest: XCTestCase {
     
-    private var sdkConfiguration: Prebid!
+    private var sdkConfiguration: SilverMob!
     private let targeting = Targeting.shared
     
     override func setUp() {
         super.setUp()
-        sdkConfiguration = Prebid.mock
+        sdkConfiguration = SilverMob.mock
     }
     
     override func tearDown() {
         sdkConfiguration = nil
-        Prebid.reset()
+        SilverMob.reset()
         super.tearDown()
     }
     
@@ -174,8 +174,8 @@ class PBMCreativeFactoryJobTest: XCTestCase {
         let creativeFactoryTimeoutPreRenderContent = 22.2
         
         // CTF is provided via API
-        Prebid.shared.creativeFactoryTimeout = creativeFactoryTimeout
-        Prebid.shared.creativeFactoryTimeoutPreRenderContent = creativeFactoryTimeoutPreRenderContent
+        SilverMob.shared.creativeFactoryTimeout = creativeFactoryTimeout
+        SilverMob.shared.creativeFactoryTimeoutPreRenderContent = creativeFactoryTimeoutPreRenderContent
         
         // display banner
         let connection = PrebidServerConnection()
@@ -203,8 +203,8 @@ class PBMCreativeFactoryJobTest: XCTestCase {
         let creativeFactoryTimeoutPreRenderContent = 22.2
         
         // CTF values are provided by PBS
-        try! sdkConfiguration.setCustomPrebidServer(url: Prebid.devintServerURL)
-        sdkConfiguration.prebidServerAccountId = Prebid.devintAccountID
+        try! sdkConfiguration.setCustomPrebidServer(url: SilverMob.devintServerURL)
+        sdkConfiguration.prebidServerAccountId = SilverMob.devintAccountID
         
         let configId = "b6260e2b-bc4c-4d10-bdb5-f7bdd62f5ed4"
         let adUnitConfig = AdUnitConfig(configId: configId, size: CGSize(width: 300, height: 250))

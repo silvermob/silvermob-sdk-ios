@@ -16,35 +16,35 @@
 import Foundation
 @testable import SilverMobSdk
 
-extension Prebid {
+extension SilverMob {
     static let devintServerURL = "https://prebid.devint.openx.net/openrtb2/auction"
     static let devintAccountID = "4f112bad-8cd2-4c43-97d0-1ab72fd442ed"
     static let prodAccountID = "0689a263-318d-448b-a3d4-b02e8a709d9d"
     
-    static var mock: Prebid {
-        Prebid.reset()
-        return Prebid.shared
+    static var mock: SilverMob {
+        SilverMob.reset()
+        return SilverMob.shared
     }
     
     static func reset() {
-        Prebid.shared.prebidServerHost = PrebidHost.Custom
-        Prebid.shared.prebidServerAccountId = ""
+        SilverMob.shared.prebidServerHost = PrebidHost.Custom
+        SilverMob.shared.prebidServerAccountId = ""
         Host.shared.reset()
         
-        Prebid.shared.timeoutMillis = 2000
+        SilverMob.shared.timeoutMillis = 2000
         
-        Prebid.shared.useCacheForReportingWithRenderingAPI = false
+        SilverMob.shared.useCacheForReportingWithRenderingAPI = false
         
-        Prebid.forcedIsViewable = false
-        Prebid.shared.clearCustomHeaders()
-        Prebid.shared.clearStoredBidResponses()
-        Prebid.shared.includeWinners = false
-        Prebid.shared.includeBidderKeys = false
+        SilverMob.forcedIsViewable = false
+        SilverMob.shared.clearCustomHeaders()
+        SilverMob.shared.clearStoredBidResponses()
+        SilverMob.shared.includeWinners = false
+        SilverMob.shared.includeBidderKeys = false
         
-        Prebid.shared.useExternalClickthroughBrowser = false
+        SilverMob.shared.useExternalClickthroughBrowser = false
         
-        Prebid.shared.creativeFactoryTimeout = 6.0
-        Prebid.shared.creativeFactoryTimeoutPreRenderContent = 30.0
+        SilverMob.shared.creativeFactoryTimeout = 6.0
+        SilverMob.shared.creativeFactoryTimeoutPreRenderContent = 30.0
     }
     
     static var forcedIsViewable: Bool {

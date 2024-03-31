@@ -127,7 +127,7 @@ public class BannerView: UIView,
         adLoadFlowController = PBMAdLoadFlowController(
             bidRequesterFactory: { [adUnitConfig] config in
                 PBMBidRequester(connection: PrebidServerConnection.shared,
-                                sdkConfiguration: Prebid.shared,
+                                sdkConfiguration: SilverMob.shared,
                                 targeting: Targeting.shared,
                                 adUnitConfiguration: adUnitConfig)
             },
@@ -184,7 +184,7 @@ public class BannerView: UIView,
     }
     
     deinit {
-        Prebid.shared.storedAuctionResponse = nil
+        SilverMob.shared.storedAuctionResponse = nil
     }
     
     required init?(coder: NSCoder) {
@@ -196,7 +196,7 @@ public class BannerView: UIView,
     }
     
     @objc public func setStoredAuctionResponse(storedAuction:String){
-        Prebid.shared.storedAuctionResponse = storedAuction
+        SilverMob.shared.storedAuctionResponse = storedAuction
     }
     
     @objc public func stopRefresh() {

@@ -18,7 +18,7 @@ import XCTest
 
 class PrebidParameterBuilderTest: XCTestCase {
     
-    private let sdkConfiguration = Prebid.mock
+    private let sdkConfiguration = SilverMob.mock
     private var targeting: Targeting!
     
     override func setUp() {
@@ -30,7 +30,7 @@ class PrebidParameterBuilderTest: XCTestCase {
     
     override func tearDown() {
         UtilitiesForTesting.resetTargeting(targeting)
-        Prebid.reset()
+        SilverMob.reset()
     }
     
     func testAdPositionHeader() {
@@ -308,7 +308,7 @@ class PrebidParameterBuilderTest: XCTestCase {
     }
 
     func testStoredBidResponses() {
-        Prebid.shared.addStoredBidResponse(bidder: "testBidder", responseId: "testResponseId")
+        SilverMob.shared.addStoredBidResponse(bidder: "testBidder", responseId: "testResponseId")
 
         let configId = "b6260e2b-bc4c-4d10-bdb5-f7bdd62f5ed4"
         let adUnitConfig = AdUnitConfig(configId: configId, size: CGSize(width: 320, height: 50))
@@ -727,8 +727,8 @@ class PrebidParameterBuilderTest: XCTestCase {
 
     func testIncludewinnersAndIncludeBidderKeysAreNil() {
         //Default value
-        Prebid.shared.includeWinners = false
-        Prebid.shared.includeBidderKeys = false
+        SilverMob.shared.includeWinners = false
+        SilverMob.shared.includeBidderKeys = false
 
         let adUnit = BannerAdUnit(configId: "test", size: CGSize(width: 300, height: 250))
         adUnit.adUnitConfig.adFormats = [.banner]
@@ -740,8 +740,8 @@ class PrebidParameterBuilderTest: XCTestCase {
     
     func testIncludewinnersAndIncludeBidderKeysAreNotNil() {
         //Default value
-        Prebid.shared.includeWinners = true
-        Prebid.shared.includeBidderKeys = true
+        SilverMob.shared.includeWinners = true
+        SilverMob.shared.includeBidderKeys = true
 
         let adUnit = BannerAdUnit(configId: "test", size: CGSize(width: 300, height: 250))
         adUnit.adUnitConfig.adFormats = [.banner]
@@ -752,7 +752,7 @@ class PrebidParameterBuilderTest: XCTestCase {
     
     
     func testIncludeWinnersFlagIsTrue() {
-        Prebid.shared.includeWinners = true
+        SilverMob.shared.includeWinners = true
 
         let adUnit = BannerAdUnit(configId: "test", size: CGSize(width: 300, height: 250))
         adUnit.adUnitConfig.adFormats = [.banner]
@@ -764,7 +764,7 @@ class PrebidParameterBuilderTest: XCTestCase {
 
     
     func testIncludeBidderKeys() {
-        Prebid.shared.includeBidderKeys = true
+        SilverMob.shared.includeBidderKeys = true
         
         let adUnit = BannerAdUnit(configId: "test", size: CGSize(width: 300, height: 250))
         adUnit.adUnitConfig.adFormats = [.banner]

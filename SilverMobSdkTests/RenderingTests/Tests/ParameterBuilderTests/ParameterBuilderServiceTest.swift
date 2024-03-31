@@ -24,7 +24,7 @@ class ParameterBuilderServiceTest : XCTestCase {
     
     override func setUp() {
         UtilitiesForTesting.resetTargeting(.shared)
-        Prebid.shared.shareGeoLocation = true
+        SilverMob.shared.shareGeoLocation = true
     }
     
     override func tearDown() {
@@ -52,7 +52,7 @@ class ParameterBuilderServiceTest : XCTestCase {
         targeting.addAppKeyword("appKeyword1,appKeyword2")
         targeting.userID = "userID"
         
-        let sdkConfiguration = Prebid.mock
+        let sdkConfiguration = SilverMob.mock
         
         let mockBundle = MockBundle()
         let mockDeviceAccessManager = MockDeviceAccessManager(rootViewController: nil)

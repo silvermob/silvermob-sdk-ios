@@ -213,7 +213,7 @@ public class MediationBannerAdUnit : NSObject {
             }
             
             self.fetchDemand(connection: PrebidServerConnection.shared,
-                             sdkConfiguration: Prebid.shared,
+                             sdkConfiguration: SilverMob.shared,
                              targeting: Targeting.shared,
                              completion: completion)
         })
@@ -222,7 +222,7 @@ public class MediationBannerAdUnit : NSObject {
     public func fetchDemand(completion: ((ResultCode)->Void)?) {
         
         fetchDemand(connection: PrebidServerConnection.shared,
-                    sdkConfiguration: Prebid.shared,
+                    sdkConfiguration: SilverMob.shared,
                     targeting: Targeting.shared,
                     completion: completion)
     }
@@ -242,7 +242,7 @@ public class MediationBannerAdUnit : NSObject {
     
     // NOTE: do not use `private` to expose this method to unit tests
     func fetchDemand(connection: PrebidServerConnectionProtocol,
-                     sdkConfiguration: Prebid,
+                     sdkConfiguration: SilverMob,
                      targeting: Targeting,
                      completion: ((ResultCode)->Void)?) {
         guard bidRequester == nil else {

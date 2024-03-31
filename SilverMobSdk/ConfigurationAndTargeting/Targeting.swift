@@ -256,8 +256,8 @@ public class Targeting: NSObject {
     
     public func getExternalUserIds() -> [[AnyHashable: Any]]? {
         var externalUserIdArray = [ExternalUserId]()
-        if Prebid.shared.externalUserIdArray.count != 0 {
-            externalUserIdArray = Prebid.shared.externalUserIdArray
+        if SilverMob.shared.externalUserIdArray.count != 0 {
+            externalUserIdArray = SilverMob.shared.externalUserIdArray
         } else {
             externalUserIdArray = externalUserIds
         }

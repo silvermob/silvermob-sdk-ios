@@ -54,7 +54,7 @@
 #pragma mark - PBMParameterBuilder
 
 - (void)buildBidRequest:(PBMORTBBidRequest *)bidRequest {
-    if (Prebid.shared.shareGeoLocation == false) {
+    if (SilverMob.shared.shareGeoLocation == false) {
         return;;
     }
     if (!(self.locationManager && bidRequest)) {

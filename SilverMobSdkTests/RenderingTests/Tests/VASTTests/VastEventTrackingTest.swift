@@ -44,14 +44,14 @@ class VastEventTrackingTest : XCTestCase, PBMCreativeViewDelegate {
         self.creativeFactory = nil
         self.expectations.removeAll()
         
-        Prebid.reset()
+        SilverMob.reset()
         
         super.tearDown()
     }
     
     func testEvents() {
-        Prebid.forcedIsViewable = true
-        defer { Prebid.reset() }
+        SilverMob.forcedIsViewable = true
+        defer { SilverMob.reset() }
 
         modalManager.modalViewControllerClass = MockPBMModalViewController.self
     

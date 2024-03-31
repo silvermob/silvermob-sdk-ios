@@ -50,13 +50,13 @@ public class AdUnit: NSObject, DispatcherDelegate {
         adUnitConfig.adConfiguration.isOriginalAPI = true
         adUnitConfig.adFormats = adFormats
         
-        bidRequester = PBMBidRequester(connection: PrebidServerConnection.shared, sdkConfiguration: Prebid.shared,
+        bidRequester = PBMBidRequester(connection: PrebidServerConnection.shared, sdkConfiguration: SilverMob.shared,
                                        targeting: Targeting.shared, adUnitConfiguration: adUnitConfig)
         
         super.init()
         
         // PBS should cache the bid for original api.
-        Prebid.shared.useCacheForReportingWithRenderingAPI = true
+        SilverMob.shared.useCacheForReportingWithRenderingAPI = true
     }
     
     // Internal only!
@@ -113,7 +113,7 @@ public class AdUnit: NSObject, DispatcherDelegate {
             return
         }
         
-        if Prebid.shared.prebidServerAccountId.isEmpty || Prebid.shared.prebidServerAccountId.containsOnly(.whitespaces) {
+        if SilverMob.shared.prebidServerAccountId.isEmpty || SilverMob.shared.prebidServerAccountId.containsOnly(.whitespaces) {
             completion(BidInfo(resultCode: .prebidInvalidAccountId))
             return
         }
@@ -147,7 +147,7 @@ public class AdUnit: NSObject, DispatcherDelegate {
             }
         }
         
-        let timeout = Int(truncating: Prebid.shared.timeoutMillisDynamic ?? NSNumber(value: .PB_Request_Timeout))
+        let timeout = Int(truncating: SilverMob.shared.timeoutMillisDynamic ?? NSNumber(value: .PB_Request_Timeout))
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(timeout), execute: {
             if (!self.didReceiveResponse) {
                 self.timeOutSignalSent = true

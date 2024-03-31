@@ -34,7 +34,7 @@ AdUnit *adUnit;
     [adUnit clearAppContent];
     [adUnit clearUserData];
     
-    Prebid.shared.useExternalClickthroughBrowser = false;
+    SilverMob.shared.useExternalClickthroughBrowser = false;
 }
 
 - (void)testFetchDemand {

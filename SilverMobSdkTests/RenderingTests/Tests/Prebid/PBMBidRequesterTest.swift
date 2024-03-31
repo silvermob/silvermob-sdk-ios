@@ -18,14 +18,14 @@ import XCTest
 @testable import SilverMobSdk
 
 class PBMBidRequesterTest: XCTestCase {
-    private var sdkConfiguration: Prebid!
+    private var sdkConfiguration: SilverMob!
     private let targeting = Targeting.shared
     
     override func setUp() {
         super.setUp()
-        sdkConfiguration = Prebid.mock
-        try! sdkConfiguration.setCustomPrebidServer(url: Prebid.devintServerURL)
-        sdkConfiguration.prebidServerAccountId = Prebid.devintAccountID
+        sdkConfiguration = SilverMob.mock
+        try! sdkConfiguration.setCustomPrebidServer(url: SilverMob.devintServerURL)
+        sdkConfiguration.prebidServerAccountId = SilverMob.devintAccountID
     }
     
     override func tearDown() {

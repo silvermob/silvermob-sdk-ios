@@ -22,7 +22,7 @@ import CoreFoundation
 
 class PBMVastLoaderCheckForAds : XCTestCase {
     
-    let sdkConfiguration = Prebid.mock
+    let sdkConfiguration = SilverMob.mock
     
     var wrapper1:PBMVastWrapperAd! = nil
     var wrapper2:PBMVastWrapperAd! = nil

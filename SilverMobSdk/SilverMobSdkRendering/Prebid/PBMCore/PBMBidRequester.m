@@ -88,6 +88,8 @@
                                         ? dynamicTimeout_onRead.doubleValue
                                         : (rawTimeoutMS_onRead / 1000.0));
     
+    PBMLogInfo(@"Bid request: %@", requestString);
+    
     @weakify(self);
     NSDate * const requestDate = [NSDate date];
     [self.connection post:requestServerURL

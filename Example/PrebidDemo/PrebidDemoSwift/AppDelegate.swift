@@ -34,9 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIView.setAnimationsEnabled(false)
         }
         // Set account id and custom Prebid server URL
-        SilverMob.shared.prebidServerAccountId = "0689a263-318d-448b-a3d4-b02e8a709d9d"
-        try! SilverMob.shared.setCustomPrebidServer(url: "https://prebid-server-test-j.prebid.org/openrtb2/auction")
+        SilverMob.shared.prebidServerAccountId = "13c4f9d0-6d7d-4398-8e39-f08052acbc70"
         
+        SilverMob.shared.pbsDebug = true
         // Initialize Prebid SDK
         SilverMob.initializeSDK(gadMobileAdsVersion: GADGetStringFromVersionNumber(GADMobileAds.sharedInstance().versionNumber)) { status, error in
             if let error = error {

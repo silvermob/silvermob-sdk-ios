@@ -38,16 +38,6 @@ limitations under the License.
     XCTAssertEqual(case2, result2);
 }
 
-- (void)testServerHostCustomInvalid {
-    //given
-    NSError *error = nil;
-    
-    //when
-    [SilverMob.shared setCustomPrebidServerWithUrl:@"wrong url" error:&error];
-    
-    //then
-    XCTAssertNotNil(error);
-}
 
 - (void)testAccountId {
     //given

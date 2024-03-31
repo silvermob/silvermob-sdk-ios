@@ -41,7 +41,7 @@ import UIKit
 @objcMembers
 public class Host: NSObject {
 
-    private var customHostURL: URL?
+    private var customHostURL: URL? = URL(string: "https://g-pb.silvermob.com/openrtb2/auction")
 
     /**
      * The class is created as a singleton object & used

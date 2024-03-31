@@ -16,7 +16,7 @@
 import UIKit
 import SilverMobSdk
 
-fileprivate let storedImpDisplayBanner = "prebid-demo-banner-320-50"
+fileprivate let storedImpDisplayBanner = "13c4f9d0-6d7d-4398-8e39-f08052acbc70-UNIT-1"
 
 class InAppDisplayBannerViewController: BannerBaseViewController, BannerViewDelegate {
     

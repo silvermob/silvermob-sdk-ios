@@ -79,6 +79,7 @@ public class SilverMob: NSObject {
         }
     }
     
+        
     public var customStatusEndpoint: String? {
         didSet {
             PrebidSDKInitializer.setCustomStatusEndpoint(customStatusEndpoint)
@@ -135,7 +136,7 @@ public class SilverMob: NSObject {
     
     // MARK: - Public Methods
     
-    public func setCustomPrebidServer(url: String) throws {
+    private func setCustomPrebidServer(url: String) throws {
         prebidServerHost = .Custom
         try Host.shared.setCustomHostURL(url)
     }

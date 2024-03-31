@@ -86,6 +86,8 @@
         [[PBMSKAdNetworksParameterBuilder alloc] initWithBundle:bundle targeting:targeting adConfiguration:adConfiguration],
     ]];
     
+    bidRequest.test = @(sdkConfiguration.pbsDebug ? 1 : 0);
+    
     if (extraParameterBuilders) {
         [parameterBuilders addObjectsFromArray:extraParameterBuilders];
     }
